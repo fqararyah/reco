@@ -25,29 +25,46 @@ with open('./packet.txt', 'w') as f:
         packet += random.choice(string.ascii_letters)
     f.write(packet)
 
-with open('./patterns_matcher.cpp', 'w') as f:
-    f.write('#include "pattern_matcher.h"\n\n\n')
-    f.write('void pattern_matcher(ap_int<1> positions[' + str(num_of_patterns) + '][chunck_len + pattern_max_len], char chunk[chunck_len + pattern_max_len - 1]) {\n')
-    for i in range(num_of_patterns):
-        current_pattern_len = str( len(pattern_list[i]) )
-        f.write('int starting_indx_' + str(i) + ' = pattern_max_len - ' + current_pattern_len + ';\n')
-        f.write('for(int i=starting_indx; i<chunck_len + pattern_max_len - 1; i++){\n')
-        f.write('if(')
-        for j in range(len(pattern_list[i])):    
-            f.write("'" + pattern_list[i][j] + "' == chunk[i" + ( ('+' + str(j)) if j > 0 else '' ) + ']')
-            if j < len(pattern_list[i]) - 1:
-                f.write(' && ')
-        f.write(') {\n positions[' + str(i) + '][i] = 1; \n}\n}\n')
-    f.write('\n}')
-
+pattern_list = []
 count = 0
 long_patterns_count = 0
+pattern_max_len = 0
 with open('pattern_match_snort3_content.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
+        pattern_list.append(line)
         count += len(line)
+        if(len(line) > pattern_max_len):
+            pattern_max_len = len(line)
         if(len(line) > 64):
             long_patterns_count += 1
 
-print(count)
-print(long_patterns_count)
+num_of_patterns = len(pattern_list)
+
+specials = {}
+specials["'"] = "\\'"
+specials['"'] = '\\"'
+
+with open('./patterns_matcher.cpp', 'w') as f:
+    f.write('#include "pattern_matcher.h"\n\n\n')
+    f.write('void pattern_matcher(bool matched, int pattern_id, char chunk[buffer_size]) {\n')
+    for i in range(num_of_patterns):
+        current_pattern_len = str( len(pattern_list[i]) )
+        f.write('for(int i=0; i<buffer_size; i++){\n')
+        f.write('if(')
+        for j in range(len(pattern_list[i])): 
+            current_char = pattern_list[i][j]
+            if current_char in specials.keys():
+                current_char = specials[current_char]
+                print(current_char)
+            f.write("'" + current_char + "' == chunk[i" + ( ('+' + str(j)) if j > 0 else '' ) + ']')
+            if j < len(pattern_list[i]) - 1:
+                f.write(' && ')
+        f.write(') {\n matched = true;\npattern_id = ' + str(i) + ' ;\n}\n}\n')
+    f.write('\n}')
+
+
+print('num_of_patterns', num_of_patterns)
+print('count', count)
+print('long_patterns_count', long_patterns_count)
+print('pattern_max_len', pattern_max_len)
