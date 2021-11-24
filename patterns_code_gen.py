@@ -2,7 +2,7 @@ import numpy as np
 import random
 import string
 
-random.seed(5)
+""" random.seed(5)
 np.random.seed(5)
 
 packet_size = 1024
@@ -23,12 +23,13 @@ with open('./packet.txt', 'w') as f:
     packet = ''
     for j in range(packet_size):
         packet += random.choice(string.ascii_letters)
-    f.write(packet)
+    f.write(packet) """
 
 pattern_list = []
 count = 0
 long_patterns_count = 0
 pattern_max_len = 0
+chunk_size = 1
 with open('pattern_match_snort3_content.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
@@ -64,6 +65,8 @@ with open('./patterns_matcher.cpp', 'w') as f:
     for i in range(num_of_patterns):
         current_pattern_len = str( len(pattern_list[i]) )
         f.write('for(int i=0; i<buffer_size; i++){\n')
+        if chunk_size > 1:
+            f.write('#pragma unroll factor = ' + str(chunk_size) + '\n')
         f.write('if(')
         for j in range(len(pattern_list[i])): 
             current_char = pattern_list[i][j]
