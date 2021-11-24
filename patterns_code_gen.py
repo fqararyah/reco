@@ -47,7 +47,20 @@ specials['"'] = '\\"'
 
 with open('./patterns_matcher.cpp', 'w') as f:
     f.write('#include "pattern_matcher.h"\n\n\n')
-    f.write('void pattern_matcher(bool matched, int pattern_id, char chunk[buffer_size]) {\n')
+
+    f.write('void shift(char buffer[buffer_size]){\n')
+    f.write('for(int i=0; i< buffer_size - chunk_len; i++){\n')
+    f.write('buffer[i] = buffer[i+chunk_len];\n')
+    f.write('}\n')
+    f.write('}\n\n')
+
+    f.write('void fill(char chunk[chunk_len], char buffer[buffer_size]){\n')
+    f.write('for(int i=0;i<chunk_len; i++){\n')
+    f.write('buffer[buffer_size - chunk_len + i] = chunk[i];\n')
+    f.write('}\n')
+    f.write('}\n\n')
+
+    f.write('void match(bool &matched, int &pattern_id, char buffer[buffer_size]) {\n')
     for i in range(num_of_patterns):
         current_pattern_len = str( len(pattern_list[i]) )
         f.write('for(int i=0; i<buffer_size; i++){\n')
@@ -57,7 +70,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
             if current_char in specials.keys():
                 current_char = specials[current_char]
                 print(current_char)
-            f.write("'" + current_char + "' == chunk[i" + ( ('+' + str(j)) if j > 0 else '' ) + ']')
+            f.write("'" + current_char + "' == buffer[i" + ( ('+' + str(j)) if j > 0 else '' ) + ']')
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
         f.write(') {\n matched = true;\npattern_id = ' + str(i) + ' ;\n}\n}\n')

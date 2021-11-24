@@ -1,4 +1,9 @@
-const int pattern_max_len = 20;
-const int chunck_len = 64;
+const int pattern_max_len = 364;
+const int chunk_len = 64;
+//Buffer size should be pattern_max_len + chunk_len, however, patern_max_len might not be divisable by patern_max_len
+//this assumes that chunk_len bytes are processed in parallel
+const int buffer_size = chunk_len + pattern_max_len;
 
-void pattern_matcher(ap_int<1> positions[256][chunck_len + pattern_max_len], char chunk[chunck_len + pattern_max_len - 1]);
+void match(bool &matched, int &pattern_id, char buffer[buffer_size]);
+void shift(char buffer[buffer_size]);
+void fill(char chunk[chunk_len], char buffer[buffer_size]);
