@@ -30,13 +30,22 @@ count = 0
 long_patterns_count = 0
 pattern_max_len = 0
 chunk_size = 1
+uniques = []
+for i in range(364):
+    uniques.append({})
 with open('pattern_match_snort3_content.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
         count += len(line)
+        for i in range(len(line)):
+            if line[i] not in uniques[i]:
+                uniques[i][line[i]] = 1
+            uniques[i][line[i]] += 1
         if(len(line) > pattern_max_len):
             pattern_max_len = len(line)
+            if len(line) == 364:
+                print(line)
         if(len(line) > 64):
             long_patterns_count += 1
 
@@ -81,6 +90,13 @@ with open('./patterns_matcher.cpp', 'w') as f:
 
 
 print('num_of_patterns', num_of_patterns)
-print('count', count)
+print('num_characters', count)
 print('long_patterns_count', long_patterns_count)
 print('pattern_max_len', pattern_max_len)
+
+sum_unique = 0
+for unique in uniques:
+    #print(len(unique))
+    sum_unique += len(unique)
+
+print('sum_unique', sum_unique)
