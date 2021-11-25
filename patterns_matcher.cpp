@@ -13,6 +13,12 @@ buffer[buffer_size - chunk_len + i] = chunk[i];
 }
 }
 
+void dummy(bool &matched, int &pattern_id, char buffer[buffer_size]){
+matched = 1;
+dummy_loop:for(int i=0; i< buffer_size - chunk_len; i++){
+pattern_id += buffer[i];
+}
+}
 void match(bool &matched, int &pattern_id, char buffer[buffer_size]) {
 boolean b0_1 =(buffer[0] == '2');
 boolean b0_2 =(buffer[0] == 'q');
