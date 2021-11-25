@@ -31,6 +31,7 @@ long_patterns_count = 0
 pattern_max_len = 0
 chunk_size = 1
 uniques = []
+patterns_lens = {}
 for i in range(364):
     uniques.append({})
 with open('pattern_match_snort3_content.txt', 'r') as f:
@@ -38,6 +39,9 @@ with open('pattern_match_snort3_content.txt', 'r') as f:
         line = line.replace('\n', '')
         pattern_list.append(line)
         count += len(line)
+        if len(line) not in patterns_lens:
+            patterns_lens[len(line)] = 0
+        patterns_lens[len(line)] += 1
         for i in range(len(line)):
             if line[i] not in uniques[i]:
                 uniques[i][line[i]] = 1
@@ -55,7 +59,7 @@ specials = {}
 specials["'"] = "\\'"
 specials['"'] = '\\"'
 
-with open('./patterns_matcher.cpp', 'w') as f:
+with open('./patterns_matcher_bf.cpp', 'w') as f:
     f.write('#include "pattern_matcher.h"\n\n\n')
 
     f.write('void shift(char buffer[buffer_size]){\n')
@@ -100,3 +104,15 @@ for unique in uniques:
     sum_unique += len(unique)
 
 print('sum_unique', sum_unique)
+
+sum_16 = 0
+sum_32 = 0
+for key, val in patterns_lens.items():
+    #print(key, val)
+    if key <= 16:
+        sum_16 += val
+    if key <= 32:
+        sum_32 += val
+
+print('< 16 chars: ', sum_16)
+print('< 32 chars: ', sum_32)
