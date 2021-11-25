@@ -68,12 +68,12 @@ with open('./patterns_matcher.cpp', 'w') as f:
         if current_char in specials.keys():
             current_char_fixed = specials[current_char]
         f.write(characters_vars_map[current_char] + ' >> 1;\n')
-        f.write(characters_vars_map[current_char] + '(' + str(register_len - 1) + ") = ('" + current_char_fixed + "' == buffer[buffer_size - chunk_len]);\n")
+        f.write(characters_vars_map[current_char] + '(' + str(register_len - 1) +', '+str(register_len - 1) + ") = ('" + current_char_fixed + "' == buffer[buffer_size - chunk_len]);\n")
     for i in range(num_of_patterns):
         f.write('if(')
         for j in range(len(pattern_list[i])): 
             current_char = pattern_list[i][j]
-            f.write(characters_vars_map[current_char] + '(0)')
+            f.write(characters_vars_map[current_char] + '(0,0)')
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
         f.write(') {\nmatched = true;\npattern_id = ' + str(i) + ';\n}\n')
