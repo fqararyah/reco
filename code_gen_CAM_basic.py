@@ -43,6 +43,13 @@ with open('./patterns_matcher.cpp', 'w') as f:
     f.write('buffer[buffer_size - chunk_len + i] = chunk[i];\n')
     f.write('}\n')
     f.write('}\n\n')
+    
+    f.write('void dummy(bool &matched, int &pattern_id, char buffer[buffer_size]){\n')
+    f.write('matched = 1;\n')
+    f.write('dummy_loop:for(int i=0; i< buffer_size - chunk_len; i++){\n')
+    f.write('pattern_id += buffer[i];\n')
+    f.write('}\n')
+    f.write('}\n')
 
     f.write('void match(bool &matched, int &pattern_id, char buffer[buffer_size]) {\n')
     for i in range(len(uniques)):
