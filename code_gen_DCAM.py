@@ -9,7 +9,7 @@ pattern_max_len = 0
 chunk_size = 1
 chars_rls = {}
 
-with open('pattern_match_snort3_content_sm.txt', 'r') as f:
+with open('pattern_match_snort3_content.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
