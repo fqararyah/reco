@@ -9,7 +9,7 @@ pattern_max_len = 0
 chunk_size = 1
 chars_rls = {}
 
-with open('pattern_match_snort3_content.txt', 'r') as f:
+with open('pattern_match_snort3_content_sm.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -73,8 +73,15 @@ with open('./patterns_matcher.cpp', 'w') as f:
         f.write('if(')
         for j in range(len(pattern_list[i])): 
             current_char = pattern_list[i][j]
-            f.write(characters_vars_map[current_char] + '(0,0)')
+            f.write(characters_vars_map[current_char] + '(' + str(j) + ', ' + str(j) + ')')
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
         f.write(') {\nmatched = true;\npattern_id = ' + str(i) + ';\n}\n')
     f.write('\n}')
+
+sum_bits = 0
+for key, val in chars_rls.items():
+    sum_bits += val
+
+print(sum_bits, ' bits')
+print(sum_bits/1000, ' bits(k)')
