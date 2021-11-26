@@ -1,3 +1,4 @@
+from os import write
 import numpy as np
 
 
@@ -59,7 +60,8 @@ with open('./patterns_matcher.cpp', 'w') as f:
     for current_char, register_len in chars_rls.items():
         reg_name = 'reg_' + str(indx)
         characters_vars_map[current_char] = reg_name
-        f.write('ap_uint<' + str(register_len) + '>' + reg_name + ' = 0;\n')
+        #f.write('ap_uint<' + str(register_len) + '>' + reg_name + ' = 0;\n')
+        f.write('boolean ' + reg_name + '[' + str(register_len) + '] = 0;\n')
         indx += 1
 
     f.write('void match(bool &matched, int &pattern_id, char buffer[buffer_size]) {\n')
@@ -67,13 +69,16 @@ with open('./patterns_matcher.cpp', 'w') as f:
         current_char_fixed = current_char
         if current_char in specials.keys():
             current_char_fixed = specials[current_char]
-        f.write(characters_vars_map[current_char] + ' >> 1;\n')
-        f.write(characters_vars_map[current_char] + '(' + str(register_len - 1) +', '+str(register_len - 1) + ") = ('" + current_char_fixed + "' == buffer[buffer_size - chunk_len]);\n")
+        #f.write(characters_vars_map[current_char] + ' >> 1;\n')
+        f.write('for(int i = 0; i <' + str(register_len -1) + '; i++){\n')
+        f.write(characters_vars_map[current_char] + '[i] =' + characters_vars_map[current_char] + '[i + 1];\n}\n')
+        f.write(characters_vars_map[current_char] + '[' + str(register_len - 1) + "] = ('" + current_char_fixed + "' == buffer[buffer_size - chunk_len]);\n")
+    
     for i in range(num_of_patterns):
         f.write('if(')
         for j in range(len(pattern_list[i])): 
             current_char = pattern_list[i][j]
-            f.write(characters_vars_map[current_char] + '(' + str(j) + ', ' + str(j) + ')')
+            f.write(characters_vars_map[current_char] + '[' + str( chars_rls[current_char] - j) + ']')
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
         f.write(') {\nmatched = true;\npattern_id = ' + str(i) + ';\n}\n')
