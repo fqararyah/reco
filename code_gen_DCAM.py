@@ -61,7 +61,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
         reg_name = 'reg_' + str(indx)
         characters_vars_map[current_char] = reg_name
         #f.write('ap_uint<' + str(register_len) + '>' + reg_name + ' = 0;\n')
-        f.write('boolean ' + reg_name + '[' + str(register_len) + '] = 0;\n')
+        f.write('boolean ' + reg_name + '[' + str(register_len) + '] = {0};\n')
         indx += 1
 
     f.write('void match(bool &matched, int &pattern_id, char buffer[buffer_size]) {\n')
