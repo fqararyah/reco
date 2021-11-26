@@ -17,7 +17,7 @@ with open('pattern_match_snort3_content_sm.txt', 'r') as f:
         current_pattern_len = len(line)
         for i in range(current_pattern_len):
             current_char = line[i]
-            current_char_reg_len = current_pattern_len - i - 1
+            current_char_reg_len = current_pattern_len - i
             if current_char not in chars_rls:
                  chars_rls[current_char] = current_char_reg_len
             chars_rls[current_char] = max(chars_rls[current_char], current_char_reg_len)
@@ -78,7 +78,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
         f.write('if(')
         for j in range(len(pattern_list[i])): 
             current_char = pattern_list[i][j]
-            f.write(characters_vars_map[current_char] + '[' + str( chars_rls[current_char] - j - 1) + ']')
+            f.write(characters_vars_map[current_char] + '[' + str( chars_rls[current_char] - (len(pattern_list[i]) - j) ) + ']')
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
         f.write(') {\nmatched = true;\npattern_id = ' + str(i) + ';\n}\n')
