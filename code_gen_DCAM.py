@@ -73,7 +73,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
         f.write('if(')
         for j in range(len(pattern_list[i])): 
             current_char = pattern_list[i][j]
-            f.write(characters_vars_map[current_char] + '(' + str(0) + ', ' + str(0) + ')')
+            f.write(characters_vars_map[current_char] + '(' + str(j) + ', ' + str(j) + ')')
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
         f.write(') {\nmatched = true;\npattern_id = ' + str(i) + ';\n}\n')
