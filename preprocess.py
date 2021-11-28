@@ -20,10 +20,10 @@ def keep_short():
     with open('pattern_match_snort3_content.txt', 'r') as f:
         for line in f:
             line = line.replace('\n', '')
-            if len(line) < 8:
+            if len(line) < 4:
                 pattern_list.append(line)
     
-    with open('pattern_match_snort3_content_lt8.txt', 'w') as f:
+    with open('pattern_match_snort3_content_lt4.txt', 'w') as f:
         for pattern in pattern_list:
             f.write(pattern + '\n')
 
