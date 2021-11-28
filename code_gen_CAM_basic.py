@@ -24,6 +24,7 @@ with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
             pattern_max_len = len(line)
 
 num_of_patterns = len(pattern_list)
+pattern_list.sort()
 
 specials = {}
 specials["'"] = "\\'"
