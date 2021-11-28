@@ -1,0 +1,2134 @@
+qazwsx.hsq
+GetInfo|0D|
+BN|10 00 02 00|
+WHATISIT
+Remote|3A| 
+Wtzup Use
+FC 
+host
+USER
+NetSphere
+GateCrasher
+c|3A 5C|
+FTPON
+FTP Port open
+activate
+logged in
+|B4 B4|
+ypi0ca
+Ahhhh My Mouth Is Open
+phAse zero server
+w00w00
+backdoor
+r00t
+rewt
+wh00t!
+lrkr0x
+d13hh[
+satori
+hax0r
+friday
+StoogR
+wank
+1234
+AAAAAAAAAA
+PONG
+sicken
+ficken
+spoofworks
+skillz
+login|3A|
+l44
+*HELLO*
+betaalmostdone
+gOrave
+killme
+gesundheit!
+l44adsl
+shell bound
+alive tijgu
+alive
+newserver
+stream/
+ping
+pong
+>
+|85 80 00 01 00 01 00 00 00 00|
+|81 80|
+|00 01 00 00 00 00 00|
+|07|authors
+|07|version
+../../../
+ADMROCKS
+|CD 80 E8 D7 FF FF FF|/bin/sh
++++ath
+|FF F4 FF FD 06|
+/viewsource/template.html?
+NAMENAME
+|E8 D9 FF FF FF|/bin/sh
+|EB|/_|EB|J^|89 FB 89|>|89 F2|
+XXXX%.172u%300|24|n
+|EB 7F|]U|FE|M|98 FE|M|9B|
+whois|3A|//
+GET / HTTP/1.1
+|EB|V^VVV1|D2 88|V|0B 88|V|1E|
+cmd_rootsh
+a b c d e f
+search
+root
+|00|
+|3B|
+|7C|
+@@
+@
+|0A|     
+0
+.
+.forward
+.rhosts
+CWD
+CEL
+PASS ddd@|0A|
+pass -iss@iss
+pass wh00t
+RETR
+pass -cklaus
+pass -saint
+pass -satan
+.%20.
+SITE
+ --use-compress-program 
+Pinging from Del
+|A9| Sustainable So
+0123456789abcdefghijklmnop
+================
+OMeterObeseArmad
+|88 04|              
+abcdefghijklmnop
+ISSPNGRQ
+|00 00 00 00 00 00 00 00|
+|00 00 00 00|EEEEEEEEEEEE
+89|3A 3B|<=>?
+TJPingPro by Jim
+WhatsUp - A Netw
+Cinco Network, Inc.
+PASS
+BattleMail
+530 
+Login failed
+Welcome!psyBNC@lam3rz.de
+Command completed
+Bad command or filename
+1 file|28|s|29| copied
+uid=0|28|root|29|
+|05 00|>
+ADMINISTRATOR
+ftp|3A|
+pccsmysqladm/incs/dbconnect.inc
+@PJL RDYMSG DISPLAY =
+Invalid login
+GET 
++|06 10|@|14 D1 02 19|
+|00 01 00 03 00 01 00|
+|00 02|
+..
+|00 01|/
+|00 00 00 00|
+|5C|../|00 00 00|
+|5C|...|00 00 00|
+MSG 
+User-Agent|3A|ICQ
+NICK 
+STOR
+CWD  
+MKD  
+MKD .
+MKD
+WinGate>
+GNUTELLA CONNECT
+GNUTELLA OK
+RFB 0
+ST
+550 5.7.1
+|00 01 87 99|
+|00 01 86 A5|
+|00 01 86 A0|
+bin|00|bin|00|
+echo |22| + + |22|
+-froot|00|
+login incorrect
+root|00|root|00|
+echo |22|+ +|22|
+|00|root|00|
+|00 01 86 A2|
+A
+VERSION|0A|
+AAAAAAAAAAAAAAAA
+ehlo cybercop|0A|quit|0A|
+expn cybercop
+Amanda
+cybercop
+|0A|help|0A|quite|0A|
+|82 10| |17 91 D0| |08|
+|B0 B5 CD 80|
+|B0 17 CD 80|
+rcpt to|3A|
+|0A|D/
+HELP
+charset = |22 22|
+expn
+eply-to|3A| a~.`/bin/
+mail from|3A| |22 7C|
+MAIL FROM|3A| |7C|/usr/ucb/tail
+Croot|0D 0A|Mprog, P=/bin/
+|0A|Croot|0A|Mprog
+|0A|C|3A|daemon|0A|R
+|0A|Croot|0D 0A|Mprog
+vrfy
+x|00|p|00|_|00|r|00|e|00|g|00|
+Login failed for user 'sa'
+4Dgifts
+OutOfBox
+_RLD
+ld_library_path
+|FF F3 FF F3 FF F3 FF F3 FF F3|
+resolv_host_conf
+to su root
+not on system console
+Login incorrect
+login|3A| root
+/hsx.cgi
+/s.cgi
+/wsisa.dll/WService=
+/YaBB
+/wwwboard/passwd.txt
+/webdriver
+/whois_raw.cgi?
+/whois_raw.cgi
+ /HTTP/1.
+/webplus?about
+/webplus?script
+/websendmail
+/dcboard.cgi
+/dcforum.cgi
+/mmstdod.cgi
+/apexec.pl
+/imagemap.exe?
+/cvsweb.cgi
+/php.cgi
+/glimpse
+/htmlscript
+/info2www
+/maillist.pl
+/nph-test-cgi
+/perl.exe
+/rguest.exe
+/rwwwshell.pl
+/test-cgi
+/textcounter.pl
+/uploader.exe
+/webgais
+/finger
+/perlshop.cgi
+/aglimpse
+/AnForm2
+/args.bat
+/AT-admin.cgi
+/bnbform.cgi
+/campas
+/view-source
+/wais.pl
+/files.pl
+/wguest.exe
+/wrap
+/classifieds.cgi
+/environ.cgi
+/faxsurvey
+/filemail.pl
+/man.sh
+/snork.bat
+/w3-msql/
+/csh
+/day5datacopier.cgi
+/day5datanotifier.cgi
+/ksh
+/post-query
+/visadmin.exe
+/rsh
+/dumpenv.pl
+/snorkerz.cmd
+/survey.cgi
+/tcsh
+/win-c-sample.exe
+/rksh
+/w3tvars.pm
+/admin.pl
+/LWGate
+/archie
+/calendar
+/flexform
+/bash
+/phf
+/www-sql
+/wwwadmin.pl
+/ppdscgi.exe
+/sendform.cgi
+/upload.pl
+/AnyForm2
+/bb-hist.sh
+/redirect
+/way-board
+/pals-cgi
+/commerce.cgi
+/sendtemp.pl
+/webspirs.cgi
+tstisapi.dll
+/cfcache.map
+/cfide/administrator/index.cfm
+CF_SETDATASOURCEUSERNAME|28 29|
+/cfdocs/snippets/fileexists.cfm
+/cfdocs/expeval/exprcalc.cfm
+/cfappman/index.cfm
+/cfdocs/snippets/evaluate.cfm
+CFUSION_GETODBCDSN|28 29|
+/cfdocs/expeval/
+CF_SETDATASOURCEPASSWORD|28 29|
+CFUSION_ENCRYPT|28 29|
+CFUSION_GETODBCINI|28 29|
+CFUSION_DECRYPT|28 29|
+CFUSION_SETODBCINI|28 29|
+CFUSION_SETTINGS_REFRESH|28 29|
+/cfdocs/exampleapp/
+CFUSION_VERIFYMAIL|28 29|
+/cfdocs/snippets/
+/cfdocs/cfmlsyntaxcheck.cfm
+/application.cfm
+/onrequestend.cfm
+/_vti_rpc
+POST
+/_vti_bin/shtml.dll
+/admcgi/contents.htm
+/_private/orders.htm
+/fpsrvadm.exe
+/fpremadm.exe
+/admisapi/fpadmin.htm
+/scripts/Fpadmcgi.exe
+/_private/orders.txt
+/_private/form_results.txt
+/_private/registrations.htm
+/cfgwiz.exe
+/authors.pwd
+/_vti_bin/_vti_aut/author.exe
+/administrators.pwd
+/_private/form_results.htm
+/_vti_pvt/access.cnf
+/_private/register.txt
+/_private/registrations.txt
+/_vti_pvt/service.cnf
+/service.pwd
+/_vti_pvt/service.stp
+/_vti_pvt/services.cnf
+/_vti_bin/shtml.exe
+/_vti_pvt/svcacl.cnf
+/users.pwd
+/_vti_pvt/writeto.cnf
+..../
+/dvwssr.dll
+/_private/register.htm
+LOCK 
+.printer
+/*.idc
+..|5C|..
+.asp|3A 3A 24|DATA
+.bat?
+.cnf
+%20
+.htw?CiWebHitsFile
+/scripts/CGImail.exe
+/scripts/samples/ctguestb.idc
+/scripts/samples/details.idc
+/scripts/proxy/w3proxy.dll
+.htr
+/sensepost.exe
+/_vti_inf.html
+/iisadmpwd/achg.htr
+/msadc/samples/adctest.asp
+/iisadmin
+/scripts/iisadmin/default.htm
+/iisadmpwd/anot
+.asp.
+|23|filename=*.asp
+/scripts/iisadmin/bdir.htr
+/bdir.htr
+/carbo.dll
+cmd.exe
+.cmd?&
+/Form_JScript.asp
+&del+/s+c|3A 5C|*.*
+/ServerVariables_Jscript.asp
+%1u
+|23|filename=*.exe
+/fpcount.exe
+/scripts/tools/getdrvs.exe
+/global.asa
+|23|filename=*.idc
+/iisadmpwd/aexp
+CiWebHitsFile=
+.idc|3A 3A 24|data
+ .htr
+/msadcs.dll
+/scripts/tools/newdsn.exe
+/scripts/perl
+|0A|.pl
+ .pl
+/issamples/query.asp
+/scripts/ 
+/search97.vts
+/showcode.asp
+/adsamples/config/site.csc
+/samples/isapi/srch.htm
+/srchadm
+/scripts/uploadn.asp
+Translate|3A| F
+/viewcode.asp
+.htw
+403
+/site/iisamples
+REVLOG / 
+INDEX 
+GETPROPERTIES
+/technote/main.cgi
+/technote/print.cgi
+/ads.cgi
+.jsp
+%252ejsp
+ftp.exe
+xp_enumdsn
+xp_filelist
+xp_availablemedia
+xp_cmdshell
+nc.exe
+wsh.exe
+rcmd.exe
+telnet.exe
+net.exe
+tftp.exe
+xp_regread
+SEARCH 
+.htpasswd
+.nsf/
+/scripts/postinfo.asp
+/scripts/repost.asp
+/samples/search/queryhit.htm
+/counter.exe
+propfind
+/dsgw/bin/search?context=
+/servlet/ServletExec
+servlet/.......
+?STRENGUR
+/web_store.cgi
+/shop.cgi
+/authenticate.cgi?PASSWORD
+??????????
+/search.cgi?
+/cached_feed.cgi
+/webplus.exe?
+/webplus.cgi?
+_private/shopping_cart.mdb
+/cybercop
+User-Agent|3A| Java1.2.1|0D 0A|
+/nessus_is_probing_you_
+/admin-serv/config/admpw
+/bb-hostsvc.sh?
+/pollit/Poll_It_SSI_v2.0.cgi
+/ftp.pl
+/jsp/snp/
+/%00
+/site/eg/source.asp
+/contextAdmin/contextAdmin.html
+.html/......
+?DeleteDocument
+?EditDocument
+ls%20-l
+/mlog.phtml
+/mylog.phtml
+/etc/passwd
+?PageServices
+/config/check.txt
+/webcart/
+_AuthChangeUrl?
+/scripts/convert.bas
+/scripts/cpshost.dll
+.htaccess
+.wwwacl
+.www_acl
+/admin.php3
+cd..
+PHP_AUTH_USER=boogieman
+HEAD/./
+/guestbook.pl
+/handler
+/....
+/~root
+/config/import.txt
+cat 
+/orders/import.txt
+/count.cgi
+/catalog.nsf
+/domcfg.nsf
+/domlog.nsf
+/log.nsf
+/names.nsf
+/orders/checks.txt
+////////
+/PSUser/PSCOErrPage.htm
+/windmail.exe
+?wp-
+/passwd.php3
+/c32web.exe/ChangeAdminPassword
+/webdist.cgi
+/quikstore.cfg
+/GWWEB.EXE
+/ws_ftp.ini
+/rpm_query
+/mall_log_files/order.log
+/bigconf.cgi
+/ews/architext_query.pl
+/cgi-bin/jj
+/wwwboard.pl
+?wp-verify-link
+/read.php3
+/violation.php3
+/get32.exe
+/ping?query=
+?wp-cs-dump
+?wp-ver-info
+/bizdb1-search.cgi
+?wp-ver-diff
+/slxweb.dll/admin?command=
+?wp-start-ver
+?wp-stop-ver
+?wp-uncheckout
+?wp-html-rend
+/officescan/cgi/jdkRqNotify.exe
+/ows-bin/
+/sojourn.cgi?
+/sojourn.cgi
+/infosrch.cgi?
+/code.php3
+?wp-usr-prop
+../
+Invalid URL
+/search.vts
+/ax-admin.cgi
+/axs.cgi
+/cachemgr.cgi
+/htgrep
+/responder.cgi
+/.nsconfig
+/web-map.cgi
+/admin_files
+/backup
+/intranet/
+/ministats/admin.cgi
+/filemail
+/plusmail
+/adminlogin
+/dfire.cgi
+/ultraboard
+/empower?DB
+/ROADS/cgi-bin/search.pl
+MIT-MAGIC-COOKIE-1
+/FtpSave.dll
+/catinfo
+/FtpSaveCSP.dll
+/FtpSaveCVP.dll
+BEAVIS
+|01|1|DB CD 80 E8|[|FF FF FF|
+/SWEditServlet
+.ida
+.ida?
+.idq?
+.idq
+/fp30reg.dll
+/fp4areg.dll
+/level/
+|FF F6 FF F6 FF FB 08 FF F6|
+_PHPLIB[libdir]
+/db_mysql.inc
+/root.exe
+/exchange/LogonFrm.asp?
+/readme.eml
+/msdac/
+/_mem_bin/
+/_vti_bin/
+|00 01|
+/graphics/sml3com
+Volume Serial Number
+/admin.php
+/cgi-bin/console.exe
+/cgi-bin/cs.exe
+/txt2html.cgi
+/store.cgi
+/sendmessage.cgi
+/zsh
+-soa %p
+/bin/sh
+|00 01|W|00 00 00 18|
+.htgroup
+GET x HTTP/1.0
+/?.jsp
+~
+STAT
+/Form_VBScript.asp
+PRIVMSG
+NOTIFY * 
+/admin_/
+Location
+CCCCCCCCCCCCCCCCCCCCCCCC
+/lastlines.cgi
+aim|3A|AddGame?
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+/zml.cgi
+/way-board/way-board.cgi
+1
+/index.php
+/scripts/samples/
+/msadc/samples/
+/iissamples/
+/publisher/search.cgi
+/store/agora.cgi
+/smssend.php
+|02 01 00 04 82 01 00|
+|06|public
+public
+private
+ |04 82 01 00|
+Content-Disposition|3A|
+E_|00 03 05|
+GNUTELLA
+/.history
+/.bash_history
+User-Agent|3A| Quicktime
+Content-Type|3A|
+Content-type|3A|
+|03 00 00|
+/nph-maillist.pl
+/args.cmd
+/AT-generated.cgi
+/wwwwais
+calendar
+/calender_admin.pl
+/user_update_admin.pl
+/user_update_passwd.pl
+/bb-histlog.sh
+/bb-histsvc.sh
+/bb-rep.sh
+/bb-replog.sh
+PRIVMSG 
+/auktion.cgi
+/cgiforum.pl
+/directorypro.cgi
+/shopper.cgi
+/listrec.pl
+/mailnews.cgi
+/book.cgi
+/newsdesk.cgi
+/cal_make.pl
+/mailit.pl
+/sdbsearch.cgi
+/swc
+/ttawebtop.cgi
+/upload.cgi
+/view_source
+/ustorekeeper.pl
+/mkilog.exe
+/ctss.idc
+/iisadmpwd/aexp2.htr
+/~nobody
+/support/common.php
+/newuser?Image=../..
+/newuser
+/generate.cgi
+/spin_client.cgi
+/SiteScope/cgi/go.exe/SiteScope
+/exair/search/
+/a1disp3.cgi?
+/a1disp3.cgi
+/admentor/admin/admin.asp
+/PRN/
+/NUL/
+/alibaba.pl|7C|
+/alibaba.pl
+/query?mss=..
+/test.bat|7C|
+/test.bat
+/input.bat|7C|
+/input.bat
+/input2.bat|7C|
+/input2.bat
+/envout.bat|7C|
+/envout.bat
+/nstelemetry.adp
+/?M=D
+/server-info
+/server-status
+/ans.pl?
+/ans.pl
+/cd/../config/html/cnf_gi.htm
+/config/html/cnf_gi.htm
+/inc/sendmail.inc
+/class/mysql.class
+/bb-hist.sh?
+/bb-hostsvc.sh
+/store/agora.cgi?
+/calendar_admin.pl?
+/calendar_admin.pl
+AUTHINFO
+/cgi-bin/ls
+Mode=debug
+version
+/cgimail
+/cgiwrap
+/exec/show/config/cr
+|13|
+/%%
+/csSearch.cgi
+HELO
+ETRN
+/CVS/Entries
+/cvsweb/version
+/dbman/db.cgi
+/dcshop
+/orders/orders.txt
+/auth_data/auth_user_file.txt
+/doc/packages
+/doc/
+/login.htm?
+/login.htm
+/eshop.pl?
+/eshop.pl
+/exchange/root.asp?
+/exchange/root.asp
+/loadpage.cgi
+/cgiforum.pl?
+/mab.nsf
+/cersvr.nsf
+/setup.nsf
+/statrep.nsf
+/webadmin.nsf
+/events4.nsf
+/ntsync4.nsf
+/collect4.nsf
+/mailw46.nsf
+/bookmark.nsf
+/agentrunner.nsf
+/mail.box
+/cgitest.exe
+/slxweb.dll
+/empower?DB=
+/faqmanager.cgi?
+/faqmanager.cgi
+/fcgi-bin/echo.exe
+/FormHandler.cgi
+/htimage.exe
+/guestbook.cgi
+/search.cgi
+/htsearch?-c
+/htsearch?exclude=`
+/htsearch
+DELETE 
+/../../
+|FF FF FF FF FF FF|
+/icat
+/htmlscript?../..
+/formmail
+/ftp.pl?
+/GWWEB.EXE?
+/doeditvotes.cgi
+.asp
+CMD
+RNFR 
+MODE
+PWD
+SYST
+/StoreCSVS/InstantOrder.asmx
+*|02|
+APOP
+Username|3A|
+Version_Mapper
+/document.d2w
+/db2www
+/test-cgi/*?*
+/testcgi
+/test.cgi
+/perl.exe?
+/perl?
+/tst.bat
+/environ.pl
+/campas?|0A|
+/cart32.exe
+/pfdispaly.cgi?
+/pfdispaly.cgi
+/pagelog.cgi
+/sendmail.cfm
+/trace.axd
+cmd32.exe
+/~ftp
+/mkplog.exe
+Index of /cgi-bin/
+img src=javascript
+/cgi-bin/
+/cgi-dos/
+/home/ftp
+/home/www
+EXECUTE_SYSTEM
+description=|28|
+select 
+ where 
+describe 
+all_constraints
+all_views
+all_source
+all_tables
+all_tab_columns
+all_tab_privs
+dba_tablespace
+dba_tables
+user_tablespace
+sys.all_users
+grant 
+alter user
+drop table
+create table
+alter table
+truncate table
+create database
+alter database
+/imagemap.exe
+/calendar-admin.pl
+/echo.bat
+/hello.bat
+/ad.cgi
+/bbs_forum.cgi
+/bsguest.cgi
+/bslist.cgi
+/cgforum.cgi
+/newdesk
+/register.cgi
+/gbook.cgi
+/simplestguest.cgi
+/statsconfig.pl
+/talkbalk.cgi
+/adcycle
+/MachineInfo
+/emumail.cgi
+doctodep.btr
+/infosrch.cgi
+JOIN 
+/a1stats/
+new XMLHttpRequest|28|
+/left_main.php
+/global.inc
+/dnstools.php
+/dostuff.php?
+/dostuff.php
+secure_site, ok
+/supp_membre.php
+/users.xml
+aim|3A|AddExternalApp?
+/as_web.exe
+/as_web4.exe
+PARTIAL
+logged,true
+/b2/b2-include/
+/cgiproc?Nocfile=
+/cgiproc?|24|
+/cgiproc
+/search.dll
+/.DS_Store
+/.FBCIndex
+/pbserver/pbserver.dll
+/php.exe
+/bb_smilies.php
+|0F 00 00 00 03|show databases
+/csPassword.cgi
+/password.cgi.tmp
+USERHOST 
+|3A|
+200
+HTTP/
+/rwcgi60
+Transfer-Encoding|3A|
+X-CCCCCCC|3A 20|
+*GOBBLE*
+uname
+GOBBLES
+mailto|3A|ops@digisle.com
+/StreamingStatistics
+/directory.php
+|00 01|C
+psfile=|22|`
+/alienform.cgi
+/af.cgi
+/WEB-INF
+/servlet/
+/search
+/examples/servlet/SnoopServlet
+/servlet/con
+/modules.php?
+/error/500error.jsp
+SSH-
+/mailman/
+document.domain|28|
+javascript|3A|//
+LOGIN
+!@|23|
+AUTHENTICATE
+LIST
+/vncviewer.jar
+/webalizer/
+/webcart-lite/
+/webfind.exe
+/way-board.cgi
+/active.log
+/robots.txt
+png []..Ks l44
+niggahbitch
+/robot.txt
+/pixfir~1/how_to_login.html
+/servlet/admin
+Authorization|3A|
+YWRtaW46YWRtaW4
+/mrtg.cgi
+|00 01 00 02 00 01 00|
+/story.pl
+/XSQLConfig.xml
+/dms0
+/globals.jsa
+/oprocmgr-status
+/cgicso
+/nph-publish.cgi
+/printenv
+GET / HTTP/1.1|0D 0A 0D 0A|
+uid=
+TERM=xterm
+|00 00|E|00 00|E|00 00|@|00|
+|00 01 86 B8|
+|04 01 00|
+|FF FF|KADM0.0A|00 00 FB 03|
+/shh//bi
+LSUB
+RENAME
+FIND
+|00 04 93 F3|
+|00 01 86 E4|
+|00 01 87 88|
+M-SEARCH 
+SolarWinds.Net
+authorized_keys
+AUTH
+/rpc-nlog.pl
+/rpc-smb.pl
+/cart.cgi
+XTND
+|01|
+RMDIR
+/Carello/add.exe
+/ecscripts/ecware.exe
+/cgi-bin/admin/admin
+/ab2/
+|00 01 86 AB|
+|00 01 86 F3|
+gstsearch
+/quick-reply.php
+/ion-p
+REST
+DELE
+RMD
+xp_regwrite
+xp_regdeletekey
+00
+* Doly trojan v1.5 - Connected.
+B|00 02|
+CAL 
+USR 
+/vpasswd.cgi
+/alya.cgi
+/viralator.cgi
+/read_body.php
+/calendar.php
+/edit_image.php
+/readmsg.php
+/smartsearch.cgi
+.php
+|04|
+|00 01 87|}
+E Fatal error, aborting.
+error 
+|00 01 86 A9|
+|00 01 86 A4|
+|00 03 0D|p
+|80 01|
+|80 02|
+|10 05|
+|23|list
+|02|
+/overflow.cgi
+/process_bug.cgi
+/enter_bug.cgi
+TRACE
+/helpout.exe
+/MsmMask.exe
+/DB4Web/
+|00|.jsp
+/.perf
+/dm/demarc
+.csp.
+.pl
+.exe
+/diffs/
+/chip.ini
+/post32.exe|7C|
+/post32.exe
+/lyris.pl
+/globals.pl
+/uploadimage.php
+/upload.php
+/privmsg.php
+|00 05 F7|h
+/parse_xml.cgi
+From|3A|
+|00 01 86 BC|
+|00 01 86 A0 00|
+connected. time/date|3A| 
+username too long
+CREATE
+CAPA
+TOP
+RSET
+/album.pl
+/chipcfg.cgi
+myaccount/login.asp
+UIDL
+Microsoft Windows
+/ikonboard.cgi
+/swsrv.cgi
+/nsiislog.dll
+/iisprotect/admin/SiteAdmin.asp
+/iisprotect/admin/
+/en/admin/aggregate.asp
+/biztalkhttpreceive.dll
+/register.asp
+/philboard.mdb
+/philboard_admin.asp
+/logicworks.ini
+/*.shtml
+/p-news.php
+/shoutbox.php
+/gm-2-b2.php
+/objects.inc.php4
+/turba/status.php
+/admin/templates/header.php
+/test.php
+/autohtml.php
+forum/index.php
+/mod_gzip_status
+/announce
+|13|BitTorrent protocol
+Content-Transfer-Encoding
+|00 01 86 A5 00|
+|05|
+|FF|SMB%
+/CSMailto.cgi
+/alert.cgi
+/catgy.cgi
+/cvsview2.cgi
+/cvslog.cgi
+/multidiff.cgi
+/dnewsweb.cgi
+/download.cgi
+/edit_action.cgi
+/everythingform.cgi
+/ezadmin.cgi
+/ezboard.cgi
+/ezman.cgi
+/fileseek.cgi
+/fom.cgi
+/getdoc.cgi
+/global.cgi
+/guestserver.cgi
+/imageFolio.cgi
+/mailfile.cgi
+/mailview.cgi
+/nsManager.cgi
+/readmail.cgi
+/printmail.cgi
+/service.cgi
+/setpasswd.cgi
+/simplestmail.cgi
+/ws_mail.cgi
+/nph-exploitscanget.cgi
+/csNews.cgi
+/psunami.cgi
+/gozila.cgi
+lib.inc.php
+forum_details.php
+db_details_importdocsql.php
+/viewtopic.php
+/register.dll
+/ContentFilter.dll
+/SFNofitication.dll
+/TOP10.dll
+/SpamExcp.dll
+/spamrule.dll
+/cgiWebupdate.exe
+/ConsoleHelp/
+/redirect.exe
+/changepw.exe
+/cwmail.exe
+/ddicgi.exe
+/ndcgi.exe
+/VsSetCookie.exe
+/Webnews.exe
+/webadmin.dll
+/UploadScript11.asp
+/DirectoryListing.asp
+/pcadmin/login.asp
+XEXCH50
+|04 00|
+EXPN
+VRFY
+SEND FROM|3A|
+SAML FROM|3A|
+SOML FROM|3A|
+MAIL FROM|3A|
+RCPT TO|3A|
+RemoteNC Control Password|3A|
+Authentication unsuccessful
+/pls/portal/PORTAL_DEMO
+/psdoccgi
+Content-Length|3A|
+/UpdateClasses.php
+/Title.php
+/Setup.php
+/GlobalFunctions.php
+/DatabaseFunctions.php
+/insert.inc.php
+/friends.php
+/admin_comment.php
+/admin_edit.php
+/admin_embed.php
+/admin_help.php
+/admin_license.php
+/admin_logout.php
+/admin_password.php
+/admin_preview.php
+/admin_settings.php
+/admin_stats.php
+/admin_templates_misc.php
+/admin_templates.php
+/admin_tpl_misc_new.php
+/admin_tpl_new.php
+/booth.php
+/poll_ssi.php
+/popup.php
+/files.inc.php
+/chatbox.php
+/setup/
+do=ext
+Argument
+/foxweb.exe
+/foxweb.dll
+/quickstore.cgi
+/shopsearch.asp
+/ShopDisplayProducts.asp
+/sgdynamo.exe
+/bsml.pl
+/authentication_index.php
+new_rights=admin
+|00 00|
+/library/editor/editor.php
+/library/lib.php
+XCWD
+/search.php
+/chatheader.php
+/partner.php
+/ad_member.php
+/defines.php
+/translations.php
+/ipchat.php
+/doc/admin
+/news.php
+/packages.php
+/default_header.php
+/options_form.php
+/nphpd.php
+/functions.php
+/config_gedcom.php
+/ISAPISkeleton.dll
+/config.conf
+/Sample_showcode.html
+/showphoto.php
+XMKD
+NLST
+|85 13|<|9E A2|
+|07|
+|3A|/
+/view_broadcast.cgi
+RNTO
+STOU
+APPE
+/_admin/
+<!
+/InteractiveQuery.jsp
+/whereami.cgi?
+/whereami.cgi
+newsletter.php
+/sql/db_type.php
+/edittag.pl
+/phptest.php
+TENmanUFactOryPOWER
+/util.pl
+/search.pl
+/page.php
+DESCRIBE
+|0A|Referer|3A| res|3A|/C|3A|
+|08|
+|0B|
+MDTM
+%
+|03 00 01|
+.ra
+.rmp
+.rt
+.rp
+sendsys
+senduuname
+checkgroups
+ihave
+sendme
+newgroup
+rmgroup
+takethis
+/form2raw.cgi
+.emf
+.wmf
+application/smi
+file|3A|//
+http|3A|//
+rtsp|3A|//
+login=0
+|05 00|
+/servlet/ServletManager
+/setinfo.hts
+ALLO
+YMSG
+<R
+|0D 00 05 00|
+/source.jsp
+<STREAMQUOTE>
+<SNAPQUOTE>
+Extended Module|3A 20|
+GET
+HEAD
+PUT
+DELETE
+LOCK
+MKCOL
+COPY
+MOVE
+--backup-dir
+/spipe/repl_file
+/modules.php
+/viewforum.php
+/init.emu
+/emumail.fcgi
+/resetpass
+ HTTP/
+/frmGetAttachment.aspx
+/login.aspx
+/frmCompose.aspx
+/header.php
+Location|3A|
+j
+Content-Length
+/crystalimagehandler.aspx
+/crystalimagehandler
+Max-dotdot
+/NessusTest
+Server|3A| eMule
+/note_overview.php
+Authorization|3A| Basic
+dbms_repcat.add_grouped_column
+dbms_repcat.compare_old_values
+dbms_repcat.cancel_statistics
+TIME_ZONE
+dbms_repcat.send_old_values
+dbms_repcat.repcat_import_check
+sys.dbms_rectifier_diff.rectify
+dbms_repcat.drop_mview_repgroup
+FROM_TZ
+connect_data
+NUMTO
+dbms_offline_og.begin_load
+|01 00 02|
+/_maincfgret.cgi
+/ping.asp
+/processit.pl
+/ibillpm.pl
+/pgpmail.pl
+BM
+/sresult.exe
+|89|PNG|0D 0A 1A 0A|
+ctx_output.start_log
+sys.dbms_system.ksdwrt
+ctxsys.driddlr.subindexpopulate
+mdsys.sdo_admin.sdo_code_size
+mdsys.md2.validate_geom
+mdsys.md2.sdo_code_size
+sys.ltutil.pushdeferredtxns
+sys.dbms_repcat_rq.add_column
+sys.dbms_repcat_utl.is_master
+alter
+create
+TO_CHAR
+/isqlplus
+/login.uix
+Content-Type
+|00 48 00 00 FF|
+dbms_offline_og.end_load
+dbms_offline_snapshot.end_load
+dbms_rectifier_diff.differences
+dbms_rectifier_diff.rectify
+dbms_repcat.add_priority_char
+dbms_repcat.add_priority_date
+dbms_repcat.add_priority_nchar
+dbms_repcat.add_priority_number
+dbms_repcat.add_priority_raw
+dbms_repcat.alter_priority_char
+dbms_repcat.alter_priority_date
+dbms_repcat.alter_priority_raw
+dbms_repcat.alter_priority
+dbms_repcat.alter_site_priority
+dbms_repcat.comment_on_repgroup
+dbms_repcat.comment_on_repsites
+dbms_repcat.define_column_group
+dbms_repcat.drop_column_group
+dbms_repcat.drop_grouped_column
+dbms_repcat.drop_priority_char
+dbms_repcat.drop_priority_date
+dbms_repcat.drop_priority_nchar
+dbms_repcat.drop_priority_raw
+dbms_repcat.drop_priority
+dbms_repcat.drop_site_priority
+dbms_repcat.execute_ddl
+dbms_repcat.make_column_group
+dbms_repcat.purge_master_log
+dbms_repcat.purge_statistics
+dbms_repcat.register_statistics
+dbms_repcat.relocate_masterdef
+dbms_repcat_rgt.check_ddl_text
+dbms_repcat.set_columns
+dbms_repcat.set_local_flavor
+dbms_repcat.specify_new_masters
+dbms_repcat.switch_mview_master
+|FF|SMBs
+_conf.php
+PAT|20|
+|00 E1|..|B4 00 00 00|
+BN |00 02 00|
+WINDIR
+SYSDIR
+ABCJZDATEIV
+RQS
+GNT
+DIST00000001
+/delhomepage.cgi
+Hello...
+APPEND
+EXAMINE
+FETCH
+STATUS
+SUBSCRIBE
+UNSUBSCRIBE
+RNFR
+SEARCH|20|
+RIFF
+|5C|secure|5C|
+connected
+getclient
+client
+|02 00|
+aim|3A|goaway?message=
+/app_sta.stm
+/w3who.dll?
+.cda
+|00 00 00 08|
+application/x-msnmsgrp2p
+|FF FA|'|00 00|TTYPROMPT|01|
+<OBJECT
+contenttype=
+/
+1j|D0 D9|
+|01 10 08 00 CC CC CC CC|
+.wmz
+.cmd|22|
+.bat|22|
+ 
+/httpodbc.dll
+|FF FA|'|00 00|
+ARKADMIN_GET_
+ARKFS|00|root|00|root
+|FF 01 00 00 00 00 01|
+|00|M
+|00|T
+|01 02 00 14|
+Content-Encoding
+/awstats.pl
+/awstats.pl?
+INVITE
+/tongji.js
+|00 00 00 01 00 00 00|
+User-Agent|3A 20|DataCha0s
+220|20|
+221 Goodbye happy r00ting
+/muieblackcat
+/anony/
+User-Agent|3A| asafaweb.com
+/services/javascript.php
+%PDF-1.
+<html><body><applet|20|code=
+GET http|3A 2F 2F|
+User-Agent|3A 20|core-project
+try
+prototype
+%ALLUSERSPROFILE%
+%PROGRAMDATA%
+%APPDATA%
+%COMMONPROGRAMFILES%
+%COMMONPROGRAMFILES|40|x86|41|%
+%COMSPEC%
+%HOMEDRIVE%
+%HOMEPATH%
+%LOCALAPPDATA%
+%PROGRAMFILES%
+%PROGRAMFILES|40|X86|41|%
+%SystemDrive%
+%SystemRoot%
+%TEMP%
+%TMP%
+%USERDATA%
+%USERNAME%
+%USERPROFILE%
+%WINDIR%
+%PUBLIC%
+%PSModulePath%
+%COMPUTERNAME%
+%LOGONSERVER%
+%PATH%
+%PATHEXT%
+%PROMPT%
+%USERDOMAIN%
+_0000=
+/in.cgi?
+/in.cgi
+/hi.cgi
+302
+auto_prepend_file
+</script><!DOCTYPE
+setTimeout|28|
+addEventListener|28|
+|9E 98|
+eval(function(p,a,c,k,e,r)
+User-Agent: Google page|0D 0A|
+/rebots.php
+|03|api|08|wipmania|03|com
+|0C|lolcantpwnme|03|net|00|
+|04|rewt|02|ru|00|
+a=YWZmaWQ9MDUyODg
+/data.php?action=
+document.location=
+http|3A 2F 2F|1.usa.gov
+|2F|Config|2E|txt
+.php?ip=
+ HTTP/1.0|0D 0A|Host:
+/s/?k=
+/file.aspx?file=
+.gif
+/default.aspx?ver=
+.php?php=receipt
+Acunetix-
+password=g00dPa$$w0rD
+src=/testasp.vulnweb.com/
+PHNjcmlwdD
+http:/www.acunetix.com
+<ScRiPt>prompt(
+>=|5C|xa2
+lfstream|26|
+User-Agent|3A|
+|9A 02 00 00|
+/js/disable.js?type=
+/cmd.php?cmd=
+|29 20|Chrome|2F|
+/listas/out/si.php
+|2F|
+/in.php
+/b/n/winrar/tudo.rar
+cstype=
+/pid/pid.txt
+GET /?
+/pics/_vti_cnf/00.inf
+User-Agent|3A 20|C:|5C|
+.php?mac=
+|3B 20|sv|3A|
+/nosignal.jpg?
+Host|3A 20|checkip.dyndns.org
+/ksa.txt
+op=
+|EF BB BF 50 4B 03 04|
+User-Agent|3A| Ufasoft
+|07|gigasbh.org|03|org
+|05|xixbh|03|com
+|05|xixbh|03|net
+/app/geoip.js
+some_magic_code1
+blobheadername2=Location
+blobheadername2=Refresh
+-2013.zip|0D 0A|
+/thinner/thumb?img=
+User-Agent|3A| <SCRIPT>
+User-Agent|3A| NOKIAN95|2F|WEB
+MZ
+0aW1lP
+Referer: HTTP/1.0|0D 0A|
+tipo=getcomando&
+&sk1=
+.com-
+sousi.extasix.com|0D 0A|
+/wp-content
+Opera/10|20|
+/images/m.php?id=
+/ccbill/m.php?id=
+<iframe
+|0F|theimageparlour|03|net|00|
+/feed?req=http
+PCRatd
+hostid=
+googleusercontent
+mozilla
+|3B| filename=
+/windows/update/search?hl=
+index.php
+<!--ded509-->
+gate.php|3F|reg=
+gate.php|3F|id=
+|03|07o|05|no-ip|04|info|00|
+s_alive.php?id=
+s_task.php?id=
+.com.br|0D 0A 0D 0A|
+.lavaibrasilok.com|0D 0A 0D 0A|
+http|7C|
+stop|7C|
+die|7C|
+sleep|7C|
+simple|7C|
+loginpost|7C|
+datapost|7C|
+syn|7C|
+udp|7C|
+udpdata|7C|
+data|7C|
+icmp|7C|
+tcpdata|7C|
+dataget|7C|
+connect|7C|
+dns|7C|
+exec|7C|
+resolve|7C|
+antiddos|7C|
+range|7C|
+ftp|7C|
+download|7C|
+fastddos|7C|
+slowhttp|7C|
+allhttp|7C|
+full|7C|
+/loader.cpl
+/cos3q/in
+|09|vseforyou|02|ru|00|
+/content/img/awards.jpg
+/linkendorse.html
+/natpay.html?
+macName=
+|09|goliyonzo|02|pw|00|
+|05|zalil|02|ru|00|
+|10|trafficconverter|03|biz|00|
+|0F|kukutrustnet777|04|info|00|
+/images/
+= HTTP/1.
+convert|28|
+filename=atom.jar
+filename=site.jar
+<applet width=
+/.cache/?f=
+/forum/search.php?email=
+/u5.htm
+Cookie: cache=cc2=
+/xgi-bin/
+rawin.php?b=
+Content-Length: 150|0D 0A|
+/get.asp?mac=
+/jorg.html
+/jlnp.html
+/jovf.html
+User-Agent: pb|0D 0A|
+filename=
+GET /?1 HTTP/1.1
+PK
+<html><body><script>|0A|var 
+/?f=a
+.php?
+|0E|scari-elegante|02|ro|00|
+|08|twinkcam|03|net|00|
+|08|cinnamyn|03|com|00|
+/?
+ps0=
+User-Agent|3A| SEX|2F|1
+return |22|DIRECT|22|
+|08|restless|02|su|00|
+==
+/000.jpg
+|09|mainenbha|03|com|00|
+|08|ohtheigh|02|cc|00|
+|55 04 0A|
+<div id=|22|HideMeBetter|22|>
+/ld.aspx
+&intip=
+/cmd.php
+|04|info|04|xxuz|03|com|00|
+/tomcat-docs/index.jsp?/
+/bbs/search.asp
+/buy-sell/search.asp?newsid=
+|0A|hidatabase|02|cn|00|
+/ul.htm
+|06|wolfvr|03|com|00|
+.html
+/update/ido.ipl
+/update/myinfo.php
+/update/param.php?
+/page/index_htm_files2/
+/form.php
+/page/index.php
+GET /3001
+SIP/2.0
+/afr.php?zoneid=
+/report.php?key=
+/instapi.php?idMk=
+/utilsbar/EazelBar.exe
+/listener.php
+.exe HTTP/1.0|0D 0A|Host:
+Gh0st
+X-Forwarded-For
+/index.php?
+?message=
+/index.aspx?info=startupkey_
+/index.aspx?info=reuse
+/index.aspx?info=configkey
+/index.aspx?info=tserror_
+/index.aspx?info=createproc_
+from=%20Nome..:
+/ping.html?r=
+/crypt_1_sell
+.exe&h=
+/v22/mutabixa/
+/v22/mutabixa/1nf3ct/
+.jpg
+/search?q=
+|0D 0A|uuid: 
+/info.php?message=
+|03|ns1|0A|boxonline
+install/upgrade.php
+ Java/1.
+/?u=
+/get.php?invite=
+/?gws_rd=cr
+|03|www|09|xiaopijia|03|com|00|
+|03|www|07|akwm139|03|com|00|
+|03|www|08|1860tour|03|com|00|
+|03|www|05|ghjgf|04|info|00|
+/status/?&cmp=
+&affid=
+aq=|22|0x|22 3B|ff=String|3B|
+|06|goobzo|03|com|00|
+/p.ashx?prd=
+= |22|applet|22 3B 20|
+.jnlp
+.zip
+.ld
+User-Agent: lynx|0D 0A|
+|07|lovesyr|05|sytes|03|net|00|
+iptux
+|54 20|
+ip-who-is.com|0D 0A|
+UPDATE|7C|
+|0D 0A 0D 0A|&nome=
+|3B 20|filename=exe.exe|0D 0A|
+/post.aspx?forumID=
+forumdisplay.php?fid=
+User-Agent|3A| Zollard|0D 0A|
+User-Agent|3A| z00sAgent
+.zollard/
+/config.php?
+/exe.exe
+|08|dataclub|03|biz
+|08|fenhelua|03|com
+/cmd?version=
+JOIN |3A|#
+/site2/
+JOIN #biz abc|0D 0A|
+JOIN #n jobs|0D 0A|
+/avcheck.exe|0D 0A 0D 0A|
+|09|jiang-zem|02|in|00|
+/webstat/?i=
+.exe|0D 0A|
+User-Agent: fortis|0D 0A|
+/se/gate.php
+/mod/lookfashon.jpg
+/FileToDownload.exe
+|07|bog5151|05|zapto|03|org|00|
+|04|kara|05|no-ip|04|info|00|
+rotina=UPDATE&tip=stat&nome=
+|05 29 00 00 00 05 29 00 00 00|
+|03 2B 82 86 02 A0 05|
+|05 29 00 00 00|
+Receipt
+Shipping
+voicemail
+statement
+|0A|Agtid|3A 20|
+|05|antiq|05|scifi|02|ro|00|
+|05|funny|05|evils|02|in|00|
+JOIN|20|#vnc|0A|
+&bolausado
+|09|appleupdt|03|com|00|
+|06|carrus|06|gotdns|03|com|00|
+|04|dfup|06|selfip|03|org|00|
+|05|fast8|07|homeftp|03|org|00|
+|06|gx5639|06|dyndns|02|tv|00|
+|06|msupdt|03|com|00|
+|07|nav1002|03|ath|02|cx|00|
+|05|pl400|06|dyndns|03|org|00|
+|06|ricush|03|ath|02|cx|00|
+|02|sv|08|serveftp|03|org|00|
+|06|swupdt|03|com|00|
+|05|tunga|07|homedns|03|org|00|
+|03|wqq|06|dyndns|03|org|00|
+|05|wwnav|06|selfip|03|net|00|
+Group|3D|
+/ag/plugin.crx
+/l/af_l_addon.xpi
+/m/f_l_addon.xpi
+/post
+/post/echo
+User-Agent: TixDll|0D 0A|
+/get/?ver=
+/HNAP1
+/download.asp?p=
+|04|0zz0|03|com|00|
+|03|www|08|rekurigo|03|com|00|
+facebook.com.exe
+Content-Length: 16
+Content-Length: 166
+/prl/el.html
+/ie-error.gif?action=utility
+|0A|smsgrabber|03|url|02|ph|00|
+/android/sms/sync.php
+/android/sms/index.php
+|26|file=SenderClient.conf
+/1/6b-558694705129b01c0
+/tmp/image.php
+Content-Length: 6|0D 0A|
+Content-Length: 13|0D 0A|
+/20
+/gcs?alpha=
+/gdi?alpha=
+lista
+/stat?
+/b/index.php?id=
+GET /123456789.functionss
+myversion|7C|
+|18 03 00|
+|18 03 01|
+|18 03 02|
+|18 03 03|
+|18 03 02 00 03 01 40 00|
+|18 03 03 00 40|
+|10|eimqqakugeccgwak|03|org|00|
+|10|uogwoigiuweyccsw|03|org|00|
+[masscan/1.0]
+/minerd.exe
+/aviatic/systema.exe
+Linux|20|
+pdf_efax_
+/cache/pdf_efax_
+filename=FuneralCeremony_
+|16 03 00|
+|17 03 00|
+|16 03 01|
+|17 03 01|
+|16 03 02|
+|17 03 02|
+|16 03 03|
+|17 03 03|
+.doc.exe
+.gif.exe
+.jpeg.exe
+.jpg.exe
+.pdf.exe
+User-Agent: hello crazyk|0D 0A|
+rotina=plogin&login=
+)&dt=
+|28 94 8D AB|
+/second/game1.inf
+POST /
+/0.gif?
+/workers.php?mac=
+Transfer-Encoding: Chunked
+|04|indo|06|msname|03|org|00|
+/re/
+.html?0.
+/install
+|06|disk57|03|com|00|
+/query?version=
+|0D 0A|builddate:
+/gate.php
+|09|nanoseklo|03|net|00|
+/index.php?email=libpurple_XMPP
+/monitor.php?
+sms
+|07|spheral|02|ru|00|
+HELLO|0A|
+READD|0A|
+READY|0A|
+/software.php?
+|3A|bpass|0A|
+|04|hslh|05|sytes|03|net|00|
+/de/
+/api.php
+/boydn/boye.html
+&string=
+/support.exe
+/tmps.exe
+/get/?data=
+|00 10|JFIF
+dados=
+Content-Length: 201|0D 0A|
+PASS|20|images|0D 0A|
+USER|20|images|0D 0A|
+/trdpr/trde.html
+|0A|saltsecond|03|net|00|
+|0A|southblood|03|net|00|
+%set_intercepts%
+.php?method=
+/notify.php
+{(new Image).src=|22|/
+|D5 B1 F8 24 89 28 15 47|
+|F2 F7 94 75 16 7E 8E 15|
+|DC C7 5E 47 A0 DB D2 51|
+%3D%28%29+%7B
+() {
+/0/ HTTP/1.
+|21 2A 20|SCANNER ON
+BUILD X86|0A|
+USER 
+Content-Length: 30
+/b/pkg/T202
+/x/
+PASS 
+/mod_
+/b/shoe/
+/mod_articles-auth-
+/beta/order.php
+|04|java|03|ns1|04|name|00|
+HHV1:
+|85 19 00 00 25 04 00 00|
+|86 19 00 00 04 01 00 00|
+|20|OS|3A 20|
+/blog-trabajos/n65dj17i1836
+/info.xml
+|04|good|05|myftp|03|org|00|
+ () {
+/update
+|09|tiptronic|04|soxx|02|us|00|
+/cbrry/cbre.html
+plug=NAO
+/verifica/index.php?id=
+INTERNACIONAL
+BRASIL
+User-Agent: RUpdate|0D 0A|
+_pdf.exe
+|04|mail|03|g0v|02|pl
+|12|natoexhibitionff14|03|com
+|03|q0v|02|pl
+|03|qov|02|hu|03|com
+/search?btnG=
+/webhp?rel=
+(|00|
+/images/view.php
+/txt/read.php
+/bin/read_i.php?
+DEXT87
+Host|3A| 209.53.113.223|0D 0A|
+.absolute.com|0D 0A|
+/11/form.php
+/11/feed.php
+|60 DB 37 37 37 37 37 37|
+|4C 4C|
+|8A 10 80 C2 67 80 F2 24 88 10|
+|65 DB 37 37 37 37 37 37|
+|7B 08 2A 2A|
+Sleepy!@#qaz13402scvsde890
+|AA 64 BA F2 56|
+|AA 74 BA F2 B9 75|
+|09 22 33 30 28 35 2C|
+|8A 10 80 EA 62 80 F2 B4 88 10|
+|8A 10 80 C2 4E 80 F2 79 88 10|
+|8A 10 80 C2 3A 80 F2 73 88 10|
+HTTP/1
+<?xml
+User-Agent: Mazilla/5.0|0D 0A|
+HawkEye Keylogger
+Subject|3A 20|=?utf-8?B?
+=0D=0AClipboard
+name=screenshot
+/js/jquery-
+/r1xpr/r1xe.html
+/m343ff4ufbnmm4uu4nf34m443frr/
+.gif?action=
+User-Agent|3A 20|ALIZER|0D 0A|
+&pcname=
+/updateb.xml?
+/check.action?iid=
+/compiler.action?iid=
+User-Agent: Google Omaha|0D 0A|
+/bb/index.php
+ EMF
+/install.ashx?id=
+/ping.ashx?action=
+User-Agent|3A 20|Mozilla
+User-Agent|3A 20|
+KrisR
+/installer_gate_client.php?
+/report.php?
+User-Agent|3A 20|Vitruvian
+/inst?
+/ip/?client=sp
+/atJs/v
+/cgi-bin/advert/getads.cgi?
+/check?iid=
+/compiler?iid=
+/upload/module
+/misc.php?v=
+/idcontact.php?
+/get_status.php?name=
+/products/file_order
+/add_user.php?name=
+/new/
+/new/get_tree.php?
+/new/add_tree.php?
+/new/all_file_info1.php?
+/flupdate/
+/gget_rtemp.php?n=
+/aadd_rtemp.php?n=
+/Adminhtml_
+/arquivo/vrs.txt
+/arquivo/cookie.txt
+|07|mymoney|04|000a|02|de|00|
+/poppxr/popi.html
+sname=
+POST / HTTP/1.0|0D 0A|Host: 
+|00 00 00 11 D0 00 00 00|
+/popkx3/popi.html
+User-Agent|3A 20|EMERY|0D 0A|
+|00 D3 62 47 DA 62 4A A1 34|
+ID_MAQUINA=
+/prok/
+texto=%0D%0A
+/diff.php
+|07|tooti15|05|no-ip|03|biz|00|
+/photoLibrary/?user=
+2|7C|http://
+protocolVersion|22|
+/forum.php
+.mod
+|16 03 01 00 51 02|
+.php?user_code=
+/order.php
+.swf?
+/atomic.php
+/rp?v=
+/offers_new?v=
+/purchase.php?a=
+User-Agent
+/document.php?rnd=
+/wp-admin/
+/counter/?
+=@eval(base64_decode($_POST
+/rss/feed/stream
+/Recoveries/Browser.txt
+/Recoveries/Mail.txt
+/Recoveries/OSKey.txt
+/vip.jpg
+/gt.jpg?
+|03 00|
+post=
+/lockycrypt.rar
+/34gf5y/r34f3345g
+CONNECT
+|43 00 00 00 05|
+|01 00 00 00 3C|
+|01 00 00 00 01|
+|01 00 00 00 3D|
+|01 00 00 00 41|
+|16 03|
+FeintedEscalator
+USER obitex@benfoods.tk|0D 0A|
+PASS Goodman1986|0D 0A|
+STOR Screenshot from|3A 20|
+/geoip/geoip.php
+|7C 7C|CM01|7C|CM02|7C|CM03|7C|
+hi00
+/News/gate.php
+/News/gate.php?
+.p HTTP/1.1
+/post.php?
+.bin
+|7B 5C|rtvpn
+/img/script.php?
+/wp-includes.php?d=
+/api.php?d=
+307
+.php?d=
+User-Agent: BLP_bbot
+/index.asp
+/random750x750.jpg?x=
+btst=
+/api/
+GODZILLA=
+Content-Type|3A 20|text/plain
+|4C 48 42 80 71 C2 A5 DF|
+/log.php?
+/userinfo.php
+.php?fname=Hawkeye_Keylogger
+Passwords Recorded On 
+/installer.php?
+/optin.php?
+/info.php?
+User-Agent|3A| 
+|3B 00 00 00 05|
+=P4CK3T=
+=0D=0A=0D=0A
+=0D=0A
+zwlviewforumogaf.php
+|7B 5C|rt|0D 3C|
+WRAssembly
+|40 00 00 00|
+|20 00 00 00 AD|
+|38 00 00 00 F5 13 89 53|
+|20 00 00 00 2B FF 4B F4|
+|30 00 00 00 2B FF 4B F4|
+attachment|3B|
+Content-Type|3A 20|image/
+|0A|Proxy|3A|
+myversion|7C|2.5.2.
+Subject: HawkEye Keylogger |7C|
+/data/info.php
+about:
+/geoip.php?bdr=
+|0B 10 05 00|
+/v1
+mashine=
+/icloudsyncd
+/add.php
+/victim.php?info=
+/LetsGo.php?A=
+iSpyKelogger
+Server Prent <please>|0D 0A|
+|7C|ge|7C|t|7C|SM|7C|S|7C|
+/message.php
+User-Agent|3A 20|Mindspark MIP 
+new_houdini|0D 0A|
+silence_keylogger|0D 0A|
+screenshot_init|0D 0A|
+silence_screenshot|0D 0A|
+screen_thumb|0D 0A|
+file_manager_
+/UpgSvr/
+|7B 22|id|22 3A|
+|01 01 00|
+.createElementNS
+.pauseAnimations
+|01 02 00|
+|4E 0F 42 07 27|
+/admin.php?f=
+/checkupdate
+time|3A 20|
+GZIPOK|3A 20|
+/web/google_analytics.php
+|41 00 00 00 83|
+|38 00 00 00 85|
+|01 00 00 00 81|
+User-Agent|3A 20|Useragents
+WebKitFormBoundary
+/gate.php?
+/cgi-bin/cgi.cgi
+/wp-json/
+|FE|SMB|40 00|
+/Servermac.php
+User-Agent|3A| Microsoft BITS
+new_slave|0D 0A|
+/ChromeSetup.bat
+/Install/InstallWizard.aspx
+|FF|SMB3|00 00 00 00|
+/wroot/v3
+Host: mbfce24rgn65bx3g.
+User-Agent|3A| WinHttpClient
+commandId=
+|7A 8D 9B DC|
+|08 E0 00 00 00 00|
+|FF|SMB|73 00 00 00 00|
+|FF|SMB|A0|
+Frag
+|FF|SMB|75 00 00 00 00|
+856
+Error
+Connect.php?id=
+/JP-ja/js?
+/search?q=Google&go=&qs=n&form=
+/mm.jpg
+/logon.aspx?Id=
+WashingTon
+User-Agent|3A| HttpBrowser/1.0
+|FF|SMB|A0 00 00 00 00|
+|FF|SMB|A2 00 00 00 00|
+|18 17 E9 E9 E9 E9|
+|1B 17 E9 E9 E9 E9|
+/.svn/entries
+/cgi-bin/sh
+/etc/inetd.conf
+/etc/motd
+/etc/shadow
+/ws_ftp.log
+/soap/soaplet/soaprouter
+SITE SETC
+/cgi-bin/cgictl
+(unknown version)
+/api/status
+did=
+download.conf
+waitPingqry
+/wp-admin
+/wp-includes
+/QualityCheck/ni6.php
+%D0%8BTl%DC

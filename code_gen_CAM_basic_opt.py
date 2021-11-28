@@ -11,7 +11,7 @@ uniques = []
 unique_counts = [0] * 364
 for i in range(364):
     uniques.append({})
-with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
+with open('pattern_match_snort3_content_gt32.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -24,6 +24,12 @@ with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
             pattern_max_len = len(line)
 
 num_of_patterns = len(pattern_list)
+
+pattern_list.sort()
+
+for i in range(len(pattern_list)):
+    if i < 1000:
+        print(pattern_list[i])
 
 specials = {}
 specials["'"] = "\\'"
@@ -45,7 +51,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
     f.write('}\n\n')
     
     f.write('void dummy(bool &matched, int &pattern_id, char buffer[buffer_size]){\n')
-    #f.write('matched = 1;\n')
+    f.write('matched = 1;\n')
     f.write('dummy_loop:for(int i=0; i< buffer_size - chunk_len; i++){\n')
     f.write('pattern_id += buffer[i];\n')
     f.write('}\n')

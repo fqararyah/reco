@@ -34,7 +34,7 @@ uniques = []
 patterns_lens = {}
 for i in range(364):
     uniques.append({})
-with open('pattern_match_snort3_content.txt', 'r') as f:
+with open('pattern_match_snort3_content_lt16.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -105,14 +105,31 @@ for unique in uniques:
 
 print('sum_unique', sum_unique)
 
+sum_8 = 0
 sum_16 = 0
 sum_32 = 0
+sum_64 = 0
+div_by_4 = 0
+div_by_5 = 0
 for key, val in patterns_lens.items():
-    #print(key, val)
+    print(key, val)
+    if key <= 8:
+        sum_8 += val
     if key <= 16:
         sum_16 += val
     if key <= 32:
         sum_32 += val
+    if key <= 64:
+        sum_64 += val
+    if key % 4 == 0:
+        div_by_4 += val
+    elif key % 5 == 0:
+        div_by_5 += val
 
+print('distinct lens:', len(patterns_lens))
+print('< 8 chars: ', sum_8)
 print('< 16 chars: ', sum_16)
 print('< 32 chars: ', sum_32)
+print('< 64 chars: ', sum_64)
+print('< %4=0 chars: ', div_by_4)
+print('< %5=0 chars: ', div_by_5)
