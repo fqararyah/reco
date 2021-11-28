@@ -45,7 +45,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
     f.write('}\n\n')
     
     f.write('void dummy(bool &matched, int &pattern_id, char buffer[buffer_size]){\n')
-    #f.write('matched = 1;\n')
+    f.write('matched = 1;\n')
     f.write('dummy_loop:for(int i=0; i< buffer_size - chunk_len; i++){\n')
     f.write('pattern_id += buffer[i];\n')
     f.write('}\n')
@@ -66,5 +66,6 @@ with open('./patterns_matcher.cpp', 'w') as f:
             f.write(uniques[j][current_char])
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
-        f.write(') {\nmatched = true;\npattern_id = ' + str(i) + ';\n}\n')
+        f.write(') {\nmatched = true;\n')
+        #f.write('pattern_id = ' + str(i) + ';\n}\n')
     f.write('\n}')
