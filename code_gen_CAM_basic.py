@@ -65,7 +65,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
             current_char = pattern_list[i][j]
             f.write(uniques[j][current_char])
             if j < len(pattern_list[i]) - 1:
-                f.write(' & ')
+                f.write(' && ')
         f.write(') {\nmatched = true;\n')
         f.write('pattern_id = ' + str(i) + ';\n')
         f.write('}\n')
