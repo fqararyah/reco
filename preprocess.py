@@ -29,7 +29,7 @@ def keep_short():
 
 def sequences_2s():
     unique_seqs = {}
-    with open('pattern_match_snort3_content.txt', 'r') as f:
+    with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
         for line in f:
             line = line.replace('\n', '')
             for i in range(0, len(line) - 5, 6):
