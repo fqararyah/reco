@@ -70,6 +70,6 @@ with open('./patterns_matcher.cpp', 'w') as f:
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
         f.write(') {\n')#matched = true;\n')
-        f.write('pattern_id = [' + str(i) + '] = 1;\n')
+        f.write('pattern_id [' + str(i) + '] = 1;\n')
         f.write('}\n')
     f.write('\n}')
