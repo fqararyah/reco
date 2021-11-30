@@ -11,7 +11,7 @@ uniques = []
 unique_counts = [0] * 364
 for i in range(364):
     uniques.append({})
-with open('pattern_match_snort3_content.txt', 'r') as f:
+with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -58,8 +58,15 @@ with open('./patterns_matcher.cpp', 'w') as f:
         for character, bool_variable_name in unique_map.items():
             if character in specials.keys():
                 character = specials[character]
-            f.write('boolean ' + bool_variable_name + ' =(' 'buffer[' + str(i) + "] == '" + character + "');\n")
-        
+            f.write('bool tmp_' + bool_variable_name + ' =(' 'buffer[' + str(i) + "] == '" + character + "');\n")
+
+    for i in range(len(uniques)):
+        unique_map = uniques[i]
+        for character, bool_variable_name in unique_map.items():
+            if character in specials.keys():
+                character = specials[character]
+            f.write('boolean ' + bool_variable_name + ' = tmp_' + bool_variable_name + ';\n')
+
     for i in range(num_of_patterns):
         f.write('if(')
         for j in range(len(pattern_list[i])): 
