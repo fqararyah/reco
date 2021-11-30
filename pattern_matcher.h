@@ -9,7 +9,7 @@ const int chunk_len = 1;
 //this assumes that chunk_len bytes are processed in parallel
 const int buffer_size = chunk_len + pattern_max_len;
 
-void match(bool &matched, int pattern_id[1000], char buffer[buffer_size]);
+void match(bool &matched, int &pattern_id, char buffer[buffer_size]);
 void shift(char buffer[buffer_size]);
 void fill(char chunk[chunk_len], char buffer[buffer_size]);
 void dummy(bool &matched, int &pattern_id, char buffer[buffer_size]);
