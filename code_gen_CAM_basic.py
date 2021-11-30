@@ -11,7 +11,7 @@ uniques = []
 unique_counts = [0] * 364
 for i in range(364):
     uniques.append({})
-with open('pattern_match_snort3_content.txt', 'r') as f:
+with open('pattern_match_snort3_content_lt4.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -68,6 +68,6 @@ with open('./patterns_matcher.cpp', 'w') as f:
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
         f.write(') {\nmatched = true;\n')
-        f.write('pattern_id = ' + str(i) + ';\n')
+        #f.write('pattern_id = ' + str(i) + ';\n')
         f.write('}\n')
     f.write('\n}')

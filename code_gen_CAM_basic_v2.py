@@ -11,7 +11,7 @@ uniques = []
 unique_counts = [0] * 364
 for i in range(364):
     uniques.append({})
-with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
+with open('pattern_match_snort3_content_lt4.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -52,21 +52,16 @@ with open('./patterns_matcher.cpp', 'w') as f:
     f.write('}\n')
     f.write('}\n')
 
-    f.write('void match(bool &matched, int &pattern_id, char buffer[buffer_size]) {\n')
+    f.write('void match(bool &matched, int pattern_id[1000], char buffer[buffer_size]) {\n')
+    uniques_indices = {}
     for i in range(len(uniques)):
         unique_map = uniques[i]
         for character, bool_variable_name in unique_map.items():
             if character in specials.keys():
                 character = specials[character]
-            f.write('bool tmp_' + bool_variable_name + ' =(' 'buffer[' + str(i) + "] == '" + character + "');\n")
-
-    for i in range(len(uniques)):
-        unique_map = uniques[i]
-        for character, bool_variable_name in unique_map.items():
-            if character in specials.keys():
-                character = specials[character]
-            f.write('boolean ' + bool_variable_name + ' = tmp_' + bool_variable_name + ';\n')
-
+            f.write('boolean ' + bool_variable_name + ';\n')
+            f.write(bool_variable_name + '(0,0) =(' 'buffer[' + str(i) + "] == '" + character + "');\n")
+        
     for i in range(num_of_patterns):
         f.write('if(')
         for j in range(len(pattern_list[i])): 
@@ -74,7 +69,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
             f.write(uniques[j][current_char])
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
-        f.write(') {\nmatched = true;\n')
-        f.write('pattern_id = ' + str(i) + ';\n')
+        f.write(') {\n')#matched = true;\n')
+        f.write('pattern_id = [' + str(i) + '] = 1;\n')
         f.write('}\n')
     f.write('\n}')
