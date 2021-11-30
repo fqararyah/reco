@@ -29,11 +29,11 @@ def keep_short():
 
 def sequences_2s():
     unique_seqs = {}
-    with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
+    with open('pattern_match_snort3_content.txt', 'r') as f:
         for line in f:
             line = line.replace('\n', '')
-            for i in range(0, len(line) - 5, 6):
-                subseq = line[i:min(i+6, len(line))]
+            for i in range(0, len(line) - 32, 32):
+                subseq = line[i:min(i+32, len(line))]
                 subseq += '_' + str(i)
                 if subseq not in unique_seqs:
                     unique_seqs[subseq] = 0
