@@ -1,7 +1,7 @@
 #include "pattern_matcher.h"
 
 
-void shift_and_fill(ap_uint<DWIDTH> chunck, char buffer[buffer_size], int start_indx){
+void shift_and_fill(ap_uint<DWIDTH> chunk, char buffer[buffer_size], int start_indx){
 for(int i=0; i< buffer_size - chunk_len; i++){
 buffer[i] = buffer[i+chunk_len];
 }
