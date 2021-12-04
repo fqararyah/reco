@@ -87,5 +87,6 @@ with open('./patterns_matcher.cpp', 'w') as f:
         f.write(') {\nmatched = true;\n')
         f.write('pattern_id = ' + str(i) + ';\n')
         f.write('}\n')
-        f.write('}\n')
+    
+    f.write('}\n')
     f.write('\n}')
