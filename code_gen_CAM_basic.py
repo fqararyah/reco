@@ -32,6 +32,10 @@ specials['"'] = '\\"'
 
 with open('./pattern_matcher.h', 'w') as f:
     f.write('#include "ap_int.h"\n\n\n')
+
+    f.write('#ifndef TDWIDTH')
+    f.write('#define TDWIDTH 16')
+    f.write('endif')
     f.write('typedef ap_uint<1> boolean;\n')
 
     f.write('const int pattern_max_len = ' + str(pattern_max_len) + ';\n')

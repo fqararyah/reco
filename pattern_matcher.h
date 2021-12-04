@@ -1,7 +1,7 @@
 #include "ap_int.h"
 
 
-typedef ap_uint<1> boolean;
+#ifndef TDWIDTH#define TDWIDTH 16endiftypedef ap_uint<1> boolean;
 const int pattern_max_len = 7;
 const int chunk_len = 1;
 const int buffer_size = chunk_len + pattern_max_len;
