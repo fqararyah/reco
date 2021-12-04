@@ -30,7 +30,7 @@ specials = {}
 specials["'"] = "\\'"
 specials['"'] = '\\"'
 
-with open('./patterns_matcher.h', 'w') as f:
+with open('./pattern_matcher.h', 'w') as f:
     f.write('#include "ap_int.h"\n\n\n')
     f.write('typedef ap_uint<1> boolean;\n')
 
