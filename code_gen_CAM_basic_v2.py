@@ -58,8 +58,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
         for character, bool_variable_name in unique_map.items():
             if character in specials.keys():
                 character = specials[character]
-            f.write('boolean tmp_' + bool_variable_name + ' =(' 'buffer[' + str(i) + "] == '" + character + "');\n")
-            f.write('boolean ' + bool_variable_name + ' = tmp_' + bool_variable_name + '==1;\n')
+            f.write('boolean ' + bool_variable_name + ' =(' 'buffer[' + str(i) + "] == '" + character + "');\n")
         
     for i in range(num_of_patterns):
         f.write('if(')
