@@ -2,7 +2,7 @@
 
 
 typedef ap_uint<1> boolean;
-const int pattern_max_len = 364;
+const int pattern_max_len = 7;
 const int chunk_len = 1;
 const int buffer_size = chunk_len + pattern_max_len;
 

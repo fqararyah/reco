@@ -11,7 +11,7 @@ uniques = []
 unique_counts = [0] * 364
 for i in range(364):
     uniques.append({})
-with open('pattern_match_snort3_content_lt4.txt', 'r') as f:
+with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
