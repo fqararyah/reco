@@ -1,8 +1,8 @@
 #include "ap_int.h"
 
 
-#ifndef TDWIDTH
-#define TDWIDTH 16
+#ifndef DWIDTH
+#define DWIDTH 512
 #endif
 typedef ap_uint<1> boolean;
 

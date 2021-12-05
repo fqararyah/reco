@@ -413,6 +413,10 @@ boolean b6_29;
 boolean b6_30;
 void match(bool &matched, int *pattern_id, char buffer[buffer_size], int start_indx) {
 for(int i=0; i<chunk_len; i++){
+//	for(int char_ind = 0; char_ind < buffer_size; char_ind++){
+//									std::cout<<(char)(buffer[char_ind]);
+//								}
+//								std::cout<<"\n"<<start_indx<<"\n";
 b0_1 =(buffer[i + 0] == 'F');
 b0_2 =(buffer[i + 0] == 'h');
 b0_3 =(buffer[i + 0] == 'U');

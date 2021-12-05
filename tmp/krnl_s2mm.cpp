@@ -82,29 +82,31 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 		for(int j=0;j<buffer_size % BYTES_PER_BEAT; j++){
 			buffer[starting_indx * BYTES_PER_BEAT + j] = freq_match_fifo[starting_indx]( j * 8 + 7, j * 8);
 		}
-		starting_indx = buffer_size % BYTES_PER_BEAT;
+		starting_indx = starting_indx * BYTES_PER_BEAT + buffer_size % BYTES_PER_BEAT;
+		int calls = 0;
 		for (int i = buffer_size/BYTES_PER_BEAT; i < size / BYTES_PER_BEAT; i++) {
-			for ( ; starting_indx < BYTES_PER_BEAT - chunk_len;
-					starting_indx += chunk_len) {
-				shift_and_fill(freq_match_fifo[i], buffer, starting_indx);
-				match(matched, pattern_id, buffer, i * BYTES_PER_BEAT + starting_indx);
+			for ( int j = starting_indx % BYTES_PER_BEAT; j < BYTES_PER_BEAT;
+					j += chunk_len) {
+				starting_indx += chunk_len;
+				match(matched, pattern_id, buffer, calls);
+				//std::cout<<i<<">>"<<starting_indx % BYTES_PER_BEAT<<">>"<<size / BYTES_PER_BEAT<<"\n";
+				shift_and_fill(freq_match_fifo[i], buffer, starting_indx % BYTES_PER_BEAT);
+				for(int ii=0;ii<chunk_len; ii++){
+				//std::cout<< freq_match_fifo[i](start_indx + ii, start_indx)<<"\n";
+				}
+				calls+= chunk_len;
 			}
-			starting_indx = 0;
 			if(i == (size / BYTES_PER_BEAT) - 1){
-				int starting_indx = pattern_max_len - chunk_len;
-				while(starting_indx > 0) {
-					shift_and_fill(safe_chunck, buffer, starting_indx);
-					match(matched, pattern_id, buffer);
-					starting_indx--;
+				int dec_starting_indx = pattern_max_len - chunk_len;
+				while(dec_starting_indx > 0) {
+					match(matched, pattern_id, buffer, calls);
+					shift_and_fill(safe_chunck, buffer, dec_starting_indx);
+					dec_starting_indx-= chunk_len;
+					calls+= chunk_len;
 				}
 			}
 		}
 	}
 }
-
-//for(int char_ind = 0; char_ind < BYTES_PER_BEAT; char_ind++){
-//						std::cout<<(char)(buffer[char_ind]);
-//					}
-//					std::cout<<"\n";
 
 

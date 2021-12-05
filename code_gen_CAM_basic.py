@@ -36,7 +36,7 @@ for i in range(256):
 
 num_of_patterns = len(pattern_list)
 pattern_list.sort()
-print(pattern_list[0])
+print(pattern_list[402])
 specials = {}
 specials["'"] = "\\'"
 specials['"'] = '\\"'
@@ -44,8 +44,8 @@ specials['"'] = '\\"'
 with open('./pattern_matcher.h', 'w') as f:
     f.write('#include "ap_int.h"\n\n\n')
 
-    f.write('#ifndef TDWIDTH\n')
-    f.write('#define TDWIDTH 16\n')
+    f.write('#ifndef DWIDTH\n')
+    f.write('#define DWIDTH 512\n')
     f.write('#endif\n')
     f.write('typedef ap_uint<1> boolean;\n\n')
 
@@ -66,7 +66,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
     f.write('buffer[i] = buffer[i+chunk_len];\n')
     f.write('}\n')
     f.write('for(int i=0;i<chunk_len; i++){\n')
-    f.write('buffer[buffer_size - chunk_len + i] = chunk(start_indx + i, start_indx);\n')
+    f.write('buffer[buffer_size - chunk_len + i] = chunk((start_indx + i) * 8 + 7, (start_indx + i) * 8);\n')
     f.write('}\n')
     f.write('}\n\n')
     
