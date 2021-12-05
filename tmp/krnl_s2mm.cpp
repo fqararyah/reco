@@ -44,7 +44,7 @@
 void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 		hls::stream<pkt> &n2k,    // Internal Stream
 		unsigned int size,    // Size in bytes
-		bool &matched, int &pattern_id,
+		bool &matched, int *pattern_id,
 		int &count) {
 #pragma HLS INTERFACE m_axi port = out offset = slave bundle = gmem
 #pragma HLS INTERFACE axis port = n2k
@@ -55,7 +55,7 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 	size = 1024;
 	ap_uint<DWIDTH> freq_match_fifo[size / BYTES_PER_BEAT];
 	pkt v;
-	bool order = 0;
+	int filled = 0;
 	char buffer[BUFFER_SIZE];
 #pragma HLS array_reshape variable=buffer complete
 	for(int char_ind = 0; char_ind < buffer_size; char_ind++){
@@ -70,15 +70,26 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 		n2k.read(v);
 		freq_match_fifo[i] = v.data;
 		out[i] = v.data;
-		order = 1;
+		filled += BYTES_PER_BEAT;
 	}
-	if(order){
-		for (int i = 0; i < size / BYTES_PER_BEAT; i++) {
-			for (int starting_indx = 0; starting_indx < BYTES_PER_BEAT - chunk_len;
+	if(filled >= buffer_size){
+		for(int i=0; i< buffer_size/BYTES_PER_BEAT; i++) {
+			for(int j=0;j<chunk_len; j++){
+				buffer[i * BYTES_PER_BEAT + j] = freq_match_fifo[i]( j * 8 + 7,  j * 8);
+			}
+		}
+		int starting_indx = buffer_size/BYTES_PER_BEAT;
+		for(int j=0;j<buffer_size % BYTES_PER_BEAT; j++){
+			buffer[starting_indx * BYTES_PER_BEAT + j] = freq_match_fifo[starting_indx]( j * 8 + 7, j * 8);
+		}
+		starting_indx = buffer_size % BYTES_PER_BEAT;
+		for (int i = buffer_size/BYTES_PER_BEAT; i < size / BYTES_PER_BEAT; i++) {
+			for ( ; starting_indx < BYTES_PER_BEAT - chunk_len;
 					starting_indx += chunk_len) {
 				shift_and_fill(freq_match_fifo[i], buffer, starting_indx);
-				match(matched, pattern_id, buffer);
+				match(matched, pattern_id, buffer, i * BYTES_PER_BEAT + starting_indx);
 			}
+			starting_indx = 0;
 			if(i == (size / BYTES_PER_BEAT) - 1){
 				int starting_indx = pattern_max_len - chunk_len;
 				while(starting_indx > 0) {

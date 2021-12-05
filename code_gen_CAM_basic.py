@@ -15,7 +15,7 @@ a_safe_prefix_postfix = ''
 for i in range(364):
     uniques.append({})
 
-with open('pattern_match_snort3_content.txt', 'r') as f:
+with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -54,9 +54,9 @@ with open('./pattern_matcher.h', 'w') as f:
     f.write('const int chunk_len = ' + str(chunk_size) + ';\n')
     f.write('const int buffer_size = chunk_len + pattern_max_len;\n')
 
-    f.write('\nvoid match(bool &matched, int &pattern_id, char buffer[buffer_size]);\n')
+    f.write('\nvoid match(bool &matched, int *pattern_id, char buffer[buffer_size], int start_indx);\n')
     f.write('void shift_and_fill(ap_uint<DWIDTH> chunk, char buffer[buffer_size], int start_indx);\n')
-    f.write('void dummy(bool &matched, int &pattern_id, char buffer[buffer_size]);\n')
+    f.write('void dummy(bool &matched, int *pattern_id, char buffer[buffer_size]);\n')
 
 with open('./patterns_matcher.cpp', 'w') as f:
     f.write('#include "pattern_matcher.h"\n\n\n')
@@ -84,7 +84,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
                 character = specials[character]
             f.write('boolean ' + bool_variable_name + ';\n')
 
-    f.write('void match(bool &matched, int &pattern_id, char buffer[buffer_size]) {\n')
+    f.write('void match(bool &matched, int *pattern_id, char buffer[buffer_size], int start_indx) {\n')
     f.write('for(int i=0; i<chunk_len; i++){\n')
     for i in range(len(uniques)):
         unique_map = uniques[i]
@@ -101,7 +101,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
         f.write(') {\nmatched = true;\n')
-        f.write('pattern_id = ' + str(i) + ';\n')
+        f.write('pattern_id [start_indx]= ' + str(i) + ';\n')
         f.write('}\n')
     
     f.write('}\n')

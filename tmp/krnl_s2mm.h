@@ -23,6 +23,6 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 			   // Added for project
 			   // @Mateo Shouldn't this be the pointers instead?
 			   bool 			&matched,
-			   int 				&pattern_id,
+			   int 				*pattern_id,
 			   int				&count
                );
