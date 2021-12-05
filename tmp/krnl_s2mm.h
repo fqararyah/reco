@@ -1,5 +1,4 @@
 #include "ap_axi_sdata.h"
-#include "ap_int.h"
 #include "hls_stream.h"
 
 #define DWIDTH 512
@@ -17,3 +16,13 @@ typedef ap_uint<1> boolean;
 //this assumes that chunk_len bytes are processed in parallel
 // @Mateo Shouldn't it be pattern_max_len + chunk_len - 1?
 #define BUFFER_SIZE (N_BYTES + PATTERN_MAX_LEN)
+
+void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
+               hls::stream<pkt> &n2k,    // Internal Stream
+               unsigned int  size,    // Size in bytes
+			   // Added for project
+			   // @Mateo Shouldn't this be the pointers instead?
+			   bool 			&matched,
+			   int 				&pattern_id,
+			   int				&count
+               );

@@ -1,4 +1,4 @@
-FC 
+FC
 host
 USER
 FTPON

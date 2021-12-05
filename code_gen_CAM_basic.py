@@ -6,12 +6,16 @@ pattern_list = []
 count = 0
 long_patterns_count = 0
 pattern_max_len = 0
-chunk_size = 1
+chunk_size = 2
 uniques = []
 unique_counts = [0] * 364
+safe_prefixs_poatfixs = [1] * 256
+a_safe_prefix_postfix = ''
+
 for i in range(364):
     uniques.append({})
-with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
+
+with open('pattern_match_snort3_content.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -19,13 +23,20 @@ with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
             if line[i] not in uniques[i]:
                 unique_counts[i] += 1
                 uniques[i][line[i]] = 'b' + str(i) + '_' + str(unique_counts[i])
+        
+        safe_prefixs_poatfixs[ ord(line[0]) ] = 0
+        safe_prefixs_poatfixs[ ord(line[len(line) - 1]) ] = 0
 
         if(len(line) > pattern_max_len):
             pattern_max_len = len(line)
 
+for i in range(256):
+    if safe_prefixs_poatfixs[i] == 1:
+        a_safe_prefix_postfix = i
+
 num_of_patterns = len(pattern_list)
 pattern_list.sort()
-
+print(pattern_list[0])
 specials = {}
 specials["'"] = "\\'"
 specials['"'] = '\\"'
@@ -33,11 +44,12 @@ specials['"'] = '\\"'
 with open('./pattern_matcher.h', 'w') as f:
     f.write('#include "ap_int.h"\n\n\n')
 
-    f.write('#ifndef TDWIDTH')
-    f.write('#define TDWIDTH 16')
-    f.write('endif')
-    f.write('typedef ap_uint<1> boolean;\n')
+    f.write('#ifndef TDWIDTH\n')
+    f.write('#define TDWIDTH 16\n')
+    f.write('#endif\n')
+    f.write('typedef ap_uint<1> boolean;\n\n')
 
+    f.write("const char a_safe_prefix_postfix = (char)" + str(a_safe_prefix_postfix) + ";\n")
     f.write('const int pattern_max_len = ' + str(pattern_max_len) + ';\n')
     f.write('const int chunk_len = ' + str(chunk_size) + ';\n')
     f.write('const int buffer_size = chunk_len + pattern_max_len;\n')
