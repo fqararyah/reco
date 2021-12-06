@@ -52,7 +52,7 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 #pragma HLS INTERFACE s_axilite port = size bundle = control
 #pragma HLS INTERFACE s_axilite port = return bundle = control
 
-	size = 1024;
+	//size = 1024;
 	ap_uint<DWIDTH> freq_match_fifo[size / BYTES_PER_BEAT];
 	pkt v;
 	int filled = 0;
