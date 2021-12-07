@@ -50,8 +50,8 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 #pragma HLS INTERFACE s_axilite port = out bundle = control
 #pragma HLS INTERFACE s_axilite port = size bundle = control
 #pragma HLS INTERFACE s_axilite port = matched bundle = control
-#pragma HLS INTERFACE s_axilite port = size pattern_id = control
-#pragma HLS INTERFACE s_axilite port = size count = control
+#pragma HLS INTERFACE s_axilite port = pattern_id bundle = control
+#pragma HLS INTERFACE s_axilite port = count bundle = control
 #pragma HLS INTERFACE s_axilite port = return bundle = control
 
 	pkt v;
