@@ -54,7 +54,7 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 #pragma HLS INTERFACE s_axilite port = size count = control
 #pragma HLS INTERFACE s_axilite port = return bundle = control
 
-		pkt v;
+	pkt v;
 	int filled = 0;
 	char buffer[buffer_size];
 #pragma HLS array_reshape variable=buffer complete
@@ -73,23 +73,22 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 		out[i] = v.data;
 	}
 	outer_loop: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
-		main_matching_loop: for (int j = 0; j < BYTES_PER_BEAT; j += chunk_len) {
+#pragma HLS LOOP_TRIPCOUNT min= 1 max= 1000000 avg= 2200
+		main_matching_loop: for (int j = 0; j < BYTES_PER_BEAT; j +=
+				chunk_len) {
 			shift_and_fill(out[i], buffer, j);
 			match(matched, pattern_id, buffer, calls);
 			calls += chunk_len;
 		}
-		if(i == (size / BYTES_PER_BEAT) - 1) {
+		if (i == (size / BYTES_PER_BEAT) - 1) {
 			done = true;
 		}
 	}
-	if(done){
-		for(int i = 0; i< buffer_size; i++){
-			main_matching_loop_st2:for (int j = 0; j < BYTES_PER_BEAT; j += chunk_len) {
-									shift_and_fill(safe_chunck, buffer, j);
-									match(matched, pattern_id, buffer, calls);
-									calls += chunk_len;
-								}
-						}
+	if (done) {
+		for (int i = 0; i < buffer_size; i += chunk_len) {
+			shift_and_fill(safe_chunck, buffer, 0);
+			match(matched, pattern_id, buffer, calls);
+			calls += chunk_len;
+		}
 	}
-
 }
