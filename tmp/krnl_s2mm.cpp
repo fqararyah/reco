@@ -41,11 +41,10 @@
 #include "krnl_s2mm.h"
 #include <iostream>
 
-extern "C" {
 void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 		hls::stream<pkt> &n2k,    // Internal Stream
 		unsigned int size,    // Size in bytes
-		bool &matched, int *pattern_id) {
+		bool &matched, int *pattern_id, int &count) {
 #pragma HLS INTERFACE m_axi port = out offset = slave bundle = gmem
 #pragma HLS INTERFACE axis port = n2k
 #pragma HLS INTERFACE s_axilite port = out bundle = control
@@ -76,6 +75,13 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 		}
 	}
 
-}
+	for(int i = 0; i< buffer_size; i++){
+		for (int j = 0; j < BYTES_PER_BEAT - chunk_len; j += chunk_len) {
+				shift_and_fill(safe_chunck, buffer, j);
+				match(matched, pattern_id, buffer, calls);
+				calls += chunk_len;
+			}
+	}
+
 }
 

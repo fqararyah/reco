@@ -36,7 +36,7 @@ for i in range(256):
 
 num_of_patterns = len(pattern_list)
 pattern_list.sort()
-print(pattern_list[402])
+print(pattern_list[0])
 specials = {}
 specials["'"] = "\\'"
 specials['"'] = '\\"'
