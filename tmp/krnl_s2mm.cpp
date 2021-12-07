@@ -37,7 +37,7 @@
  to global memory via memory mapped interface */
 
 // #include "krnl_s2mm.h" (We are including it in pattern_matcher.h
-#include "../pattern_matcher.h"
+#include "pattern_matcher.h"
 #include "krnl_s2mm.h"
 #include <iostream>
 
@@ -49,9 +49,12 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 #pragma HLS INTERFACE axis port = n2k
 #pragma HLS INTERFACE s_axilite port = out bundle = control
 #pragma HLS INTERFACE s_axilite port = size bundle = control
+#pragma HLS INTERFACE s_axilite port = matched bundle = control
+#pragma HLS INTERFACE s_axilite port = size pattern_id = control
+#pragma HLS INTERFACE s_axilite port = size count = control
 #pragma HLS INTERFACE s_axilite port = return bundle = control
 
-	pkt v;
+		pkt v;
 	int filled = 0;
 	char buffer[buffer_size];
 #pragma HLS array_reshape variable=buffer complete
@@ -64,24 +67,29 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 		safe_chunck(i + 7, i) = a_safe_prefix_postfix;
 	}
 	int calls = 0;
-	fill_loop: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
-#pragma HLS loop_tripcount min=1 max=22000
+	bool done = false;
+	data_retrival: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
 		n2k.read(v);
 		out[i] = v.data;
-		for (int j = 0; j < BYTES_PER_BEAT - chunk_len; j += chunk_len) {
-			shift_and_fill(v.data, buffer, j);
+	}
+	outer_loop: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
+		main_matching_loop: for (int j = 0; j < BYTES_PER_BEAT; j += chunk_len) {
+			shift_and_fill(out[i], buffer, j);
 			match(matched, pattern_id, buffer, calls);
 			calls += chunk_len;
 		}
+		if(i == (size / BYTES_PER_BEAT) - 1) {
+			done = true;
+		}
 	}
-
-	for(int i = 0; i< buffer_size; i++){
-		for (int j = 0; j < BYTES_PER_BEAT - chunk_len; j += chunk_len) {
-				shift_and_fill(safe_chunck, buffer, j);
-				match(matched, pattern_id, buffer, calls);
-				calls += chunk_len;
-			}
+	if(done){
+		for(int i = 0; i< buffer_size; i++){
+			main_matching_loop_st2:for (int j = 0; j < BYTES_PER_BEAT; j += chunk_len) {
+									shift_and_fill(safe_chunck, buffer, j);
+									match(matched, pattern_id, buffer, calls);
+									calls += chunk_len;
+								}
+						}
 	}
 
 }
-

@@ -62,10 +62,12 @@ with open('./patterns_matcher.cpp', 'w') as f:
     f.write('#include "pattern_matcher.h"\n\n\n')
 
     f.write('void shift_and_fill(ap_uint<DWIDTH> chunk, char buffer[buffer_size], int start_indx){\n')
-    f.write('for(int i=0; i< buffer_size - chunk_len; i++){\n')
+    f.write('shift_loop:for(int i=0; i< buffer_size - chunk_len; i++){\n')
+    f.write('#pragma HLS UNROLL\n')
     f.write('buffer[i] = buffer[i+chunk_len];\n')
     f.write('}\n')
-    f.write('for(int i=0;i<chunk_len; i++){\n')
+    f.write('fill_loop:for(int i=0;i<chunk_len; i++){\n')
+    f.write('#pragma HLS UNROLL\n')
     f.write('buffer[buffer_size - chunk_len + i] = chunk((start_indx + i) * 8 + 7, (start_indx + i) * 8);\n')
     f.write('}\n')
     f.write('}\n\n')
@@ -86,6 +88,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
 
     f.write('void match(bool &matched, int *pattern_id, char buffer[buffer_size], int start_indx) {\n')
     f.write('for(int i=0; i<chunk_len; i++){\n')
+    f.write('#pragma HLS UNROLL\n')
     for i in range(len(uniques)):
         unique_map = uniques[i]
         for character, bool_variable_name in unique_map.items():
