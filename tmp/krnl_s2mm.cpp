@@ -41,68 +41,41 @@
 #include "krnl_s2mm.h"
 #include <iostream>
 
+extern "C" {
 void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 		hls::stream<pkt> &n2k,    // Internal Stream
 		unsigned int size,    // Size in bytes
-		bool &matched, int *pattern_id,
-		int &count) {
+		bool &matched, int *pattern_id) {
 #pragma HLS INTERFACE m_axi port = out offset = slave bundle = gmem
 #pragma HLS INTERFACE axis port = n2k
 #pragma HLS INTERFACE s_axilite port = out bundle = control
 #pragma HLS INTERFACE s_axilite port = size bundle = control
 #pragma HLS INTERFACE s_axilite port = return bundle = control
 
-	//size = 1024;
-	ap_uint<DWIDTH> freq_match_fifo[size / BYTES_PER_BEAT];
 	pkt v;
 	int filled = 0;
-	char buffer[BUFFER_SIZE];
+	char buffer[buffer_size];
 #pragma HLS array_reshape variable=buffer complete
-	for(int char_ind = 0; char_ind < buffer_size; char_ind++){
+	for (int char_ind = 0; char_ind < buffer_size; char_ind++) {
 #pragma HLS unroll
-			buffer[char_ind] = a_safe_prefix_postfix;
-		}
+		buffer[char_ind] = a_safe_prefix_postfix;
+	}
 	ap_uint<DWIDTH> safe_chunck;
-	for(int i=0 ; i < DWIDTH - 8; i+=8){
+	for (int i = 0; i < DWIDTH - 8; i += 8) {
 		safe_chunck(i + 7, i) = a_safe_prefix_postfix;
 	}
-	fill_loop:for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
+	int calls = 0;
+	fill_loop: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
+#pragma HLS loop_tripcount min=1 max=22000
 		n2k.read(v);
-		freq_match_fifo[i] = v.data;
 		out[i] = v.data;
-		filled += BYTES_PER_BEAT;
-	}
-	if(filled >= buffer_size){
-		for(int i=0; i< buffer_size/BYTES_PER_BEAT; i++) {
-			for(int j=0;j<BYTES_PER_BEAT; j++){
-				buffer[i * BYTES_PER_BEAT + j] = freq_match_fifo[i]( j * 8 + 7,  j * 8);
-			}
-		}
-		int starting_indx = buffer_size/BYTES_PER_BEAT;
-		for(int j=0;j<buffer_size % BYTES_PER_BEAT; j++){
-			buffer[starting_indx * BYTES_PER_BEAT + j] = freq_match_fifo[starting_indx]( j * 8 + 7, j * 8);
-		}
-		starting_indx = buffer_size % BYTES_PER_BEAT;
-		int calls = 0;
-		for (int i = buffer_size/BYTES_PER_BEAT; i < size / BYTES_PER_BEAT; i++) {
-			for ( ; starting_indx < BYTES_PER_BEAT - chunk_len;
-					starting_indx += chunk_len) {
-				match(matched, pattern_id, buffer, calls);
-				shift_and_fill(freq_match_fifo[i], buffer, starting_indx);
-				calls+= chunk_len;
-			}
-			starting_indx = 0;
-			if(i == (size / BYTES_PER_BEAT) - 1){
-				int dec_starting_indx = pattern_max_len - chunk_len;
-				while(dec_starting_indx > 0) {
-					match(matched, pattern_id, buffer, calls);
-					shift_and_fill(safe_chunck, buffer, dec_starting_indx);
-					dec_starting_indx-= chunk_len;
-					calls+= chunk_len;
-				}
-			}
+		for (int j = 0; j < BYTES_PER_BEAT - chunk_len; j += chunk_len) {
+			shift_and_fill(v.data, buffer, j);
+			match(matched, pattern_id, buffer, calls);
+			calls += chunk_len;
 		}
 	}
-}
 
+}
+}
 
