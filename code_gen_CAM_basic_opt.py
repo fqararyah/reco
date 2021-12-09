@@ -104,7 +104,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
             current_char = pattern_list[i][j]
             f.write( 'tmp_' + str(i) + '(' + str(j) + ', ' + str(j) + ')= ' + uniques[j][current_char] + ';')
         f.write('\n')
-        f.write('if(tmp_' + str(i) + ' == pow_' + str(len(pattern_list[i])) + ') {\nmatched = true;\n')
+        f.write('if(tmp_' + str(i) + ' == digit_' + str(len(pattern_list[i])) + ') {\nmatched = true;\n')
         f.write('pattern_id [start_indx + i]= ' + str(i) + ';\n')
         f.write('}\n')
     
