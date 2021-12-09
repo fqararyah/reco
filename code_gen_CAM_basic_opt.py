@@ -87,6 +87,8 @@ with open('./patterns_matcher.cpp', 'w') as f:
             f.write('boolean ' + bool_variable_name + ';\n')
 
     f.write('void match(bool &matched, int *pattern_id, char buffer[buffer_size], int start_indx) {\n')
+    for i in range(1, pattern_max_len + 1):
+        f.write('ap_uint<' + str(i) + '> digit_' + str(i) + ' = ' + '(1 << ' + str(i) + ') - 1;\n')
     f.write('for(int i=0; i<chunk_len; i++){\n')
     f.write('#pragma HLS UNROLL\n')
     for i in range(len(uniques)):
@@ -102,7 +104,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
             current_char = pattern_list[i][j]
             f.write( 'tmp_' + str(i) + '(' + str(j) + ', ' + str(j) + ')= ' + uniques[j][current_char] + ';')
         f.write('\n')
-        f.write('if(tmp_' + str(i) + ' == ' + str(pow(2, len(pattern_list[i])) - 1) + ') {\nmatched = true;\n')
+        f.write('if(tmp_' + str(i) + ' == pow_' + str(len(pattern_list[i])) + ') {\nmatched = true;\n')
         f.write('pattern_id [start_indx + i]= ' + str(i) + ';\n')
         f.write('}\n')
     
