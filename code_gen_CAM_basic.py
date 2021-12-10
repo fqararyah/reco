@@ -36,7 +36,7 @@ for i in range(256):
 
 num_of_patterns = len(pattern_list)
 pattern_list.sort()
-print(pattern_list[2634])
+print(pattern_list[402])
 specials = {}
 specials["'"] = "\\'"
 specials['"'] = '\\"'
@@ -54,7 +54,7 @@ with open('./pattern_matcher.h', 'w') as f:
     f.write('const int chunk_len = ' + str(chunk_size) + ';\n')
     f.write('const int buffer_size = chunk_len + pattern_max_len;\n')
 
-    f.write('\nvoid match(bool &matched, int *pattern_id, char buffer[buffer_size], int start_indx);\n')
+    f.write('\nvoid match(ap_uint<16> &pattern_id, char buffer[buffer_size]);\n')
     f.write('void shift_and_fill(ap_uint<DWIDTH> chunk, char buffer[buffer_size], int start_indx);\n')
     f.write('void dummy(bool &matched, int *pattern_id, char buffer[buffer_size]);\n')
 
@@ -72,21 +72,14 @@ with open('./patterns_matcher.cpp', 'w') as f:
     f.write('}\n')
     f.write('}\n\n')
     
-    """ f.write('void dummy(bool &matched, int &pattern_id, char buffer[buffer_size]){\n')
+    """ f.write('void dummy(ap_uint<16> &pattern_id, char buffer[buffer_size]){\n')
     f.write('matched = 1;\n')
     f.write('dummy_loop:for(int i=0; i< buffer_size - chunk_len; i++){\n')
     f.write('pattern_id += buffer[i];\n')
     f.write('}\n')
     f.write('}\n') """
-    
-    for i in range(len(uniques)):
-        unique_map = uniques[i]
-        for character, bool_variable_name in unique_map.items():
-            if character in specials.keys():
-                character = specials[character]
-            f.write('boolean ' + bool_variable_name + ';\n')
 
-    f.write('void match(bool &matched, int *pattern_id, char buffer[buffer_size], int start_indx) {\n')
+    f.write('void match(ap_uint<16> &pattern_id, char buffer[buffer_size]) {\n')
     f.write('for(int i=0; i<chunk_len; i++){\n')
     f.write('#pragma HLS UNROLL\n')
     for i in range(len(uniques)):
@@ -94,7 +87,7 @@ with open('./patterns_matcher.cpp', 'w') as f:
         for character, bool_variable_name in unique_map.items():
             if character in specials.keys():
                 character = specials[character]
-            f.write(bool_variable_name + ' =(' 'buffer[i + ' + str(i) + "] == '" + character + "');\n")
+            f.write('boolean ' + bool_variable_name + ' =(' 'buffer[i + ' + str(i) + "] == '" + character + "');\n")
         
     for i in range(num_of_patterns):
         f.write('if(')
@@ -103,8 +96,8 @@ with open('./patterns_matcher.cpp', 'w') as f:
             f.write(uniques[j][current_char])
             if j < len(pattern_list[i]) - 1:
                 f.write(' && ')
-        f.write(') {\nmatched = true;\n')
-        f.write('pattern_id [start_indx + i]= ' + str(i) + ';\n')
+        f.write(') {\n')
+        f.write('pattern_id = ' + str(i) + ';\n')
         f.write('}\n')
     
     f.write('}\n')

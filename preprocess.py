@@ -50,4 +50,4 @@ def sequences_2s():
     print(cnt)
 sequences_2s()
 #keep_long()
-#keep_short()
+keep_short()

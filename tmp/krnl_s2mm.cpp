@@ -41,22 +41,21 @@
 #include "krnl_s2mm.h"
 #include <iostream>
 
-void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
+void krnl_s2mm(ap_uint<16> *out,     // Write only memory mapped
 		hls::stream<pkt> &n2k,    // Internal Stream
-		unsigned int size,    // Size in bytes
-		bool &matched, int *pattern_id, int &count) {
+		unsigned int size    // Size in bytes
+		) {
 #pragma HLS INTERFACE m_axi port = out offset = slave bundle = gmem
 #pragma HLS INTERFACE axis port = n2k
 #pragma HLS INTERFACE s_axilite port = out bundle = control
 #pragma HLS INTERFACE s_axilite port = size bundle = control
-#pragma HLS INTERFACE s_axilite port = matched bundle = control
-#pragma HLS INTERFACE s_axilite port = pattern_id bundle = control
-#pragma HLS INTERFACE s_axilite port = count bundle = control
 #pragma HLS INTERFACE s_axilite port = return bundle = control
 
 	pkt v;
 	int filled = 0;
 	char buffer[buffer_size];
+	ap_uint<DWIDTH>  packet[PACKET_SIZE];
+	ap_uint<DWIDTH> return_id;
 #pragma HLS array_reshape variable=buffer complete
 	for (int char_ind = 0; char_ind < buffer_size; char_ind++) {
 #pragma HLS unroll
@@ -66,19 +65,20 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 	for (int i = 0; i < DWIDTH - 8; i += 8) {
 		safe_chunck(i + 7, i) = a_safe_prefix_postfix;
 	}
-	int calls = 0;
 	bool done = false;
 	data_retrival: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
 		n2k.read(v);
-		out[i] = v.data;
+		packet[i % PACKET_SIZE] = v.data;
 	}
 	outer_loop: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
 #pragma HLS LOOP_TRIPCOUNT min= 1 max= 1000000 avg= 2200
 		main_matching_loop: for (int j = 0; j < BYTES_PER_BEAT; j +=
 				chunk_len) {
-			shift_and_fill(out[i], buffer, j);
-			match(matched, pattern_id, buffer, calls);
-			calls += chunk_len;
+					ap_uint<16> pattern_id = -1;
+			shift_and_fill(packet[i%PACKET_SIZE], buffer, j);
+			match(pattern_id, buffer);
+			return_id = pattern_id;
+			out[i] = return_id;
 		}
 		if (i == (size / BYTES_PER_BEAT) - 1) {
 			done = true;
@@ -86,9 +86,11 @@ void krnl_s2mm(ap_uint<DWIDTH> *out,     // Write only memory mapped
 	}
 	if (done) {
 		for (int i = 0; i < buffer_size; i += chunk_len) {
+			ap_uint<16> pattern_id = -1;
 			shift_and_fill(safe_chunck, buffer, 0);
-			match(matched, pattern_id, buffer, calls);
-			calls += chunk_len;
+			match(pattern_id, buffer);
+			return_id = pattern_id;
+			out[i] = return_id;
 		}
 	}
 }
