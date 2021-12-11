@@ -2,18 +2,18 @@
 
 
 void shift_and_fill(ap_uint<DWIDTH> chunk, char buffer[buffer_size], int start_indx){
-shift_loop:for(int i=0; i< buffer_size - chunk_len; i++){
+shift_loop:for(int i=0; i< buffer_size - parallelism; i++){
 #pragma HLS UNROLL
-buffer[i] = buffer[i+chunk_len];
+buffer[i] = buffer[i+parallelism];
 }
-fill_loop:for(int i=0;i<chunk_len; i++){
+fill_loop:for(int i=0;i<parallelism; i++){
 #pragma HLS UNROLL
-buffer[buffer_size - chunk_len + i] = chunk((start_indx + i) * 8 + 7, (start_indx + i) * 8);
+buffer[buffer_size - parallelism + i] = chunk((start_indx + i) * 8 + 7, (start_indx + i) * 8);
 }
 }
 
 void match(ap_uint<16> &pattern_id, char buffer[buffer_size]) {
-for(int i=0; i<chunk_len; i++){
+for(int i=0; i<parallelism; i++){
 #pragma HLS UNROLL
 boolean b0_1 = (buffer[i] == '|');
 boolean b1_1 = (buffer[i + 1] == '0');

@@ -8,8 +8,8 @@ typedef ap_uint<1> boolean;
 
 const char a_safe_prefix_postfix = (char)255;
 const int pattern_max_len = 364;
-const int chunk_len = 2;
-const int buffer_size = chunk_len + pattern_max_len;
+const int parallelism = 2;
+const int buffer_size = parallelism + pattern_max_len;
 
 void match(ap_uint<16> &pattern_id, char buffer[buffer_size]);
 void shift_and_fill(ap_uint<DWIDTH> chunk, char buffer[buffer_size], int start_indx);

@@ -1,20 +1,28 @@
 import numpy as np
 
-
-
 pattern_list = []
 count = 0
 long_patterns_count = 0
 pattern_max_len = 0
-chunk_size = 2
 uniques = []
 safe_prefixs_poatfixs = [1] * 256
 a_safe_prefix_postfix = ''
+parallelism = 1
+patterns_file = ''
+
+with open('config.txt', 'r') as f:
+    for line in f:
+        line = line.replace('\n', '').replace(' ', '')
+        splits = line.split('=')
+        if splits[0] == 'patterns_file':
+            patterns_file = splits[1]
+        if splits[0] == 'parallelism':
+            parallelism = splits[1]
 
 for i in range(364):
     uniques.append({})
 
-with open('pattern_match_snort3_content.txt', 'r') as f:
+with open(patterns_file, 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -43,7 +51,9 @@ for i in range(256):
 
 num_of_patterns = len(pattern_list)
 pattern_list.sort()
-print(pattern_list[402])
+print(pattern_list[2634])
+print(sum(unique_counts))
+
 specials = {}
 specials["'"] = "\\'"
 specials['"'] = '\\"'
@@ -58,8 +68,8 @@ with open('./pattern_matcher.h', 'w') as f:
 
     f.write("const char a_safe_prefix_postfix = (char)" + str(a_safe_prefix_postfix) + ";\n")
     f.write('const int pattern_max_len = ' + str(pattern_max_len) + ';\n')
-    f.write('const int chunk_len = ' + str(chunk_size) + ';\n')
-    f.write('const int buffer_size = chunk_len + pattern_max_len;\n')
+    f.write('const int parallelism = ' + str(parallelism) + ';\n')
+    f.write('const int buffer_size = parallelism + pattern_max_len;\n')
 
     f.write('\nvoid match(ap_uint<16> &pattern_id, char buffer[buffer_size]);\n')
     f.write('void shift_and_fill(ap_uint<DWIDTH> chunk, char buffer[buffer_size], int start_indx);\n')
@@ -67,18 +77,18 @@ with open('./pattern_matcher.h', 'w') as f:
 with open('./patterns_matcher.cpp', 'w') as f:
     f.write('#include "pattern_matcher.h"\n\n\n')
     f.write('void shift_and_fill(ap_uint<DWIDTH> chunk, char buffer[buffer_size], int start_indx){\n')
-    f.write('shift_loop:for(int i=0; i< buffer_size - chunk_len; i++){\n')
+    f.write('shift_loop:for(int i=0; i< buffer_size - parallelism; i++){\n')
     f.write('#pragma HLS UNROLL\n')
-    f.write('buffer[i] = buffer[i+chunk_len];\n')
+    f.write('buffer[i] = buffer[i+parallelism];\n')
     f.write('}\n')
-    f.write('fill_loop:for(int i=0;i<chunk_len; i++){\n')
+    f.write('fill_loop:for(int i=0;i<parallelism; i++){\n')
     f.write('#pragma HLS UNROLL\n')
-    f.write('buffer[buffer_size - chunk_len + i] = chunk((start_indx + i) * 8 + 7, (start_indx + i) * 8);\n')
+    f.write('buffer[buffer_size - parallelism + i] = chunk((start_indx + i) * 8 + 7, (start_indx + i) * 8);\n')
     f.write('}\n')
     f.write('}\n\n')
 
     f.write('void match(ap_uint<16> &pattern_id, char buffer[buffer_size]) {\n')
-    f.write('for(int i=0; i<chunk_len; i++){\n')
+    f.write('for(int i=0; i<parallelism; i++){\n')
     f.write('#pragma HLS UNROLL\n')
     for i in range(len(uniques)):
         unique_map = uniques[i]
