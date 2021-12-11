@@ -14,7 +14,7 @@ a_safe_prefix_postfix = ''
 for i in range(364):
     uniques.append({})
 
-with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
+with open('pattern_match_snort3_content.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
