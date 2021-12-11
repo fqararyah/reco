@@ -51,7 +51,7 @@ for i in range(256):
 
 num_of_patterns = len(pattern_list)
 pattern_list.sort()
-#print(pattern_list[2634])
+print(pattern_list.index('|B4 B4|'))
 print(sum(unique_counts))
 
 specials = {}
@@ -69,7 +69,7 @@ with open('./pattern_matcher.h', 'w') as f:
     f.write("const char a_safe_prefix_postfix = (char)" + str(a_safe_prefix_postfix) + ";\n")
     f.write('const int pattern_max_len = ' + str(pattern_max_len) + ';\n')
     f.write('const int parallelism = ' + str(parallelism) + ';\n')
-    f.write('const int buffer_size = parallelism + pattern_max_len;\n')
+    f.write('const int buffer_size = parallelism + pattern_max_len - 1;\n')
 
     f.write('\nvoid match(ap_uint<16> &pattern_id, char buffer[buffer_size]);\n')
     f.write('void shift_and_fill(ap_uint<DWIDTH> chunk, char buffer[buffer_size], int start_indx);\n')
