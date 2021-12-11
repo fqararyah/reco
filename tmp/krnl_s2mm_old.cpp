@@ -53,20 +53,27 @@ void krnl_s2mm(ap_uint<16> *out,     // Write only memory mapped
 
 	pkt v;
 	char buffer[buffer_size];
+	ap_uint<DWIDTH>  packet[PACKET_SIZE];
 #pragma HLS array_reshape variable=buffer complete
 	for (int char_ind = 0; char_ind < buffer_size; char_ind++) {
 #pragma HLS unroll
 		buffer[char_ind] = a_safe_prefix_postfix;
 	}
-
-	outer_loop: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
+	ap_uint<DWIDTH> safe_chunck;
+	for (int i = 0; i < DWIDTH - 8; i += 8) {
+		safe_chunck(i + 7, i) = a_safe_prefix_postfix;
+	}
+	bool done = false;
+	data_retrival: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
 		n2k.read(v);
+		packet[i % PACKET_SIZE] = v.data;
+	}
+	outer_loop: for (unsigned int i = 0; i < (size / BYTES_PER_BEAT); i++) {
 #pragma HLS LOOP_TRIPCOUNT min= 1 max= 1000000 avg= 2200
 		main_matching_loop: for (int j = 0; j < BYTES_PER_BEAT; j +=
 				parallelism) {
-#pragma HLS allocation function instances=match limit=1
-			ap_uint<16> pattern_id = 16000;
-			shift_and_fill(v.data, buffer, j);
+					ap_uint<16> pattern_id = 16000;
+			shift_and_fill(packet[i%PACKET_SIZE], buffer, j);
 			match(pattern_id, buffer);
 			out[i * BYTES_PER_BEAT + j] = pattern_id;
 		}

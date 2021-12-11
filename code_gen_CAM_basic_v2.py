@@ -51,7 +51,7 @@ for i in range(256):
 
 num_of_patterns = len(pattern_list)
 pattern_list.sort()
-print(pattern_list[2634])
+#print(pattern_list[2634])
 print(sum(unique_counts))
 
 specials = {}

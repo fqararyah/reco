@@ -7,7 +7,7 @@
 typedef ap_uint<1> boolean;
 
 const char a_safe_prefix_postfix = (char)255;
-const int pattern_max_len = 364;
+const int pattern_max_len = 15;
 const int parallelism = 2;
 const int buffer_size = parallelism + pattern_max_len;
 
