@@ -15,7 +15,7 @@ a_safe_prefix_postfix = ''
 for i in range(364):
     uniques.append({})
 
-with open('pattern_match_snort3_content.txt', 'r') as f:
+with open('pattern_match_snort3_content_lt8.txt', 'r') as f:
     for line in f:
         line = line.replace('\n', '')
         pattern_list.append(line)
@@ -36,7 +36,7 @@ for i in range(256):
 
 num_of_patterns = len(pattern_list)
 pattern_list.sort()
-print(pattern_list[402])
+#print(pattern_list[402])
 specials = {}
 specials["'"] = "\\'"
 specials['"'] = '\\"'
