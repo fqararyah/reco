@@ -18,12 +18,15 @@ def keep_long():
 
 def keep_short():
     with open('pattern_match_snort3_content.txt', 'r') as f:
+        sum_lens = 0
         for line in f:
             line = line.replace('\n', '')
-            if len(line) < 4:
+            if len(line) < 16:
                 pattern_list.append(line)
-    
-    with open('pattern_match_snort3_content_lt4.txt', 'w') as f:
+                sum_lens += len(line)
+    print(sum_lens/ len(pattern_list))
+    print(len(pattern_list))
+    with open('pattern_match_snort3_content_lt16.txt', 'w') as f:
         for pattern in pattern_list:
             f.write(pattern + '\n')
 
