@@ -95,41 +95,42 @@ with open('./patterns_matcher_bf.cpp', 'w') as f:
 
 print('num_of_patterns', num_of_patterns)
 print('num_characters', count)
+print('avg pattern len: ', count / num_of_patterns)
 print('long_patterns_count', long_patterns_count)
 print('pattern_max_len', pattern_max_len)
 
-sum_unique = 0
-for unique in uniques:
-    #print(len(unique))
-    sum_unique += len(unique)
+# sum_unique = 0
+# for unique in uniques:
+#     #print(len(unique))
+#     sum_unique += len(unique)
 
-print('sum_unique', sum_unique)
+# print('sum_unique', sum_unique)
 
-sum_8 = 0
-sum_16 = 0
-sum_32 = 0
-sum_64 = 0
-div_by_4 = 0
-div_by_5 = 0
-for key, val in patterns_lens.items():
-    print(key, val)
-    if key <= 8:
-        sum_8 += val
-    if key <= 16:
-        sum_16 += val
-    if key <= 32:
-        sum_32 += val
-    if key <= 64:
-        sum_64 += val
-    if key % 4 == 0:
-        div_by_4 += val
-    elif key % 5 == 0:
-        div_by_5 += val
+# sum_8 = 0
+# sum_16 = 0
+# sum_32 = 0
+# sum_64 = 0
+# div_by_4 = 0
+# div_by_5 = 0
+# for key, val in patterns_lens.items():
+#     print(key, val)
+#     if key <= 8:
+#         sum_8 += val
+#     if key <= 16:
+#         sum_16 += val
+#     if key <= 32:
+#         sum_32 += val
+#     if key <= 64:
+#         sum_64 += val
+#     if key % 4 == 0:
+#         div_by_4 += val
+#     elif key % 5 == 0:
+#         div_by_5 += val
 
-print('distinct lens:', len(patterns_lens))
-print('< 8 chars: ', sum_8)
-print('< 16 chars: ', sum_16)
-print('< 32 chars: ', sum_32)
-print('< 64 chars: ', sum_64)
-print('< %4=0 chars: ', div_by_4)
-print('< %5=0 chars: ', div_by_5)
+# print('distinct lens:', len(patterns_lens))
+# print('< 8 chars: ', sum_8)
+# print('< 16 chars: ', sum_16)
+# print('< 32 chars: ', sum_32)
+# print('< 64 chars: ', sum_64)
+# print('< %4=0 chars: ', div_by_4)
+# print('< %5=0 chars: ', div_by_5)

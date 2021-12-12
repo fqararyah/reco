@@ -51,8 +51,7 @@ for i in range(256):
 
 num_of_patterns = len(pattern_list)
 pattern_list.sort()
-print(pattern_list.index('|B4 B4|'))
-print(sum(unique_counts))
+print(pattern_list.index('friday'))
 
 specials = {}
 specials["'"] = "\\'"
