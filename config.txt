@@ -1,2 +1,2 @@
-patterns_file = pattern_match_snort3_content_lt8.txt
+patterns_file = pattern_match_snort3_content.txt
 parallelism = 2
