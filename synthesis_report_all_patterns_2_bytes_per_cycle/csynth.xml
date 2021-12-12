@@ -1,73 +1,71 @@
 <profile>
     <ReportVersion>
-        <Version>2020.2</Version>
+        <Version>2021.1</Version>
     </ReportVersion>
     <UserAssignments>
         <unit>ns</unit>
         <ProductFamily>virtexuplus</ProductFamily>
-        <Part>xcvu11p-flga2577-1-e</Part>
+        <Part>xcvu57p-fsvk2892-3-e</Part>
         <TopModelName>krnl_s2mm</TopModelName>
         <TargetClockPeriod>10.00</TargetClockPeriod>
         <ClockUncertainty>2.70</ClockUncertainty>
         <FlowTarget>vivado</FlowTarget>
     </UserAssignments>
     <PerformanceEstimates>
-        <PipelineType>none</PipelineType>
+        <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+            <EstimatedClockPeriod>7.550</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>1</Best-caseLatency>
-            <Average-caseLatency>undef</Average-caseLatency>
-            <Worst-caseLatency>undef</Worst-caseLatency>
-            <Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-            <Interval-min>2</Interval-min>
-            <Interval-max>undef</Interval-max>
+            <Best-caseLatency>51</Best-caseLatency>
+            <Average-caseLatency>70419</Average-caseLatency>
+            <Worst-caseLatency>32000019</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.510 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.704 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.320 sec</Worst-caseRealTimeLatency>
+            <Interval-min>52</Interval-min>
+            <Interval-max>32000020</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
-            <data_retrival>
-                <TripCount>undef</TripCount>
-                <Latency>
+            <outer_loop>
+                <TripCount>
                     <range>
                         <min>1</min>
-                        <max>-1</max>
+                        <max>1000000</max>
+                    </range>
+                </TripCount>
+                <Latency>
+                    <range>
+                        <min>49</min>
+                        <max>32000017</max>
                     </range>
                 </Latency>
                 <AbsoluteTimeLatency>
                     <range>
-                        <min>10</min>
-                        <max>-10</max>
+                        <min>490</min>
+                        <max>320000170</max>
                     </range>
                 </AbsoluteTimeLatency>
-                <PipelineII>1</PipelineII>
-                <PipelineDepth>2</PipelineDepth>
-            </data_retrival>
-            <main_matching_loop>
-                <TripCount>32</TripCount>
-                <Latency>241</Latency>
-                <AbsoluteTimeLatency>2410</AbsoluteTimeLatency>
-                <PipelineII>1</PipelineII>
-                <PipelineDepth>210</PipelineDepth>
-            </main_matching_loop>
+                <PipelineII>32</PipelineII>
+                <PipelineDepth>50</PipelineDepth>
+            </outer_loop>
         </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>30</BRAM_18K>
-            <FF>637237</FF>
-            <LUT>671960</LUT>
-            <DSP>0</DSP>
+            <BRAM_18K>2</BRAM_18K>
+            <FF>226168</FF>
+            <LUT>390311</LUT>
             <URAM>0</URAM>
+            <DSP>0</DSP>
         </Resources>
         <AvailableResources>
             <BRAM_18K>4032</BRAM_18K>
-            <DSP>9216</DSP>
-            <FF>2592000</FF>
-            <LUT>1296000</LUT>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
             <URAM>960</URAM>
         </AvailableResources>
     </AreaEstimates>
@@ -75,10 +73,8 @@
         <RtlPorts>
             <name>s_axi_control_AWVALID</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -88,10 +84,8 @@
         <RtlPorts>
             <name>s_axi_control_AWREADY</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -101,12 +95,10 @@
         <RtlPorts>
             <name>s_axi_control_AWADDR</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>in</Dir>
-            <Bits>7</Bits>
+            <Bits>6</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
             <HasCtrl>1</HasCtrl>
@@ -114,10 +106,8 @@
         <RtlPorts>
             <name>s_axi_control_WVALID</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -127,10 +117,8 @@
         <RtlPorts>
             <name>s_axi_control_WREADY</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -140,10 +128,8 @@
         <RtlPorts>
             <name>s_axi_control_WDATA</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>in</Dir>
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
@@ -153,10 +139,8 @@
         <RtlPorts>
             <name>s_axi_control_WSTRB</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>in</Dir>
             <Bits>4</Bits>
             <Attribute>unknown</Attribute>
@@ -166,10 +150,8 @@
         <RtlPorts>
             <name>s_axi_control_ARVALID</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -179,10 +161,8 @@
         <RtlPorts>
             <name>s_axi_control_ARREADY</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -192,12 +172,10 @@
         <RtlPorts>
             <name>s_axi_control_ARADDR</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>in</Dir>
-            <Bits>7</Bits>
+            <Bits>6</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
             <HasCtrl>1</HasCtrl>
@@ -205,10 +183,8 @@
         <RtlPorts>
             <name>s_axi_control_RVALID</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -218,10 +194,8 @@
         <RtlPorts>
             <name>s_axi_control_RREADY</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -231,10 +205,8 @@
         <RtlPorts>
             <name>s_axi_control_RDATA</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>out</Dir>
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
@@ -244,10 +216,8 @@
         <RtlPorts>
             <name>s_axi_control_RRESP</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>out</Dir>
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
@@ -257,10 +227,8 @@
         <RtlPorts>
             <name>s_axi_control_BVALID</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -270,10 +238,8 @@
         <RtlPorts>
             <name>s_axi_control_BREADY</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
@@ -283,10 +249,8 @@
         <RtlPorts>
             <name>s_axi_control_BRESP</name>
             <Object>control</Object>
-            <Type>pointer</Type>
-            <Scope/>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
-            <IOConfig/>
             <Dir>out</Dir>
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
@@ -514,7 +478,7 @@
             <IOProtocol>m_axi</IOProtocol>
             <IOConfig/>
             <Dir>out</Dir>
-            <Bits>512</Bits>
+            <Bits>32</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -526,7 +490,7 @@
             <IOProtocol>m_axi</IOProtocol>
             <IOConfig/>
             <Dir>out</Dir>
-            <Bits>64</Bits>
+            <Bits>4</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -754,7 +718,7 @@
             <IOProtocol>m_axi</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
-            <Bits>512</Bits>
+            <Bits>32</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -976,19 +940,78 @@
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
-        <TopModule>
+        <TopModule MAX_DEPTH="3">
             <ModuleName>krnl_s2mm</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_match_fu_247</InstName>
+                    <InstName>grp_shift_and_fill_fu_862</InstName>
+                    <ModuleName>shift_and_fill</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>862</ID>
+                    <BindInstances>sub_ln708_fu_96_p2 sub_ln708_1_fu_108_p2 sub_ln708_2_fu_138_p2 add_ln11_fu_174_p2 add_ln11_1_fu_180_p2 sub_ln708_3_fu_210_p2 sub_ln708_4_fu_222_p2 sub_ln708_5_fu_252_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_match_fu_901</InstName>
                     <ModuleName>match</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>247</ID>
+                    <ID>901</ID>
                 </Instance>
             </InstancesList>
+            <BindInstances>add_ln62_fu_1004_p2 add_ln71_fu_1035_p2 add_ln71_1_fu_1085_p2 add_ln71_2_fu_1136_p2 add_ln71_3_fu_1187_p2 add_ln71_4_fu_1238_p2 add_ln71_5_fu_1289_p2 add_ln71_6_fu_1340_p2 add_ln71_7_fu_1391_p2 add_ln71_8_fu_1442_p2 add_ln71_9_fu_1493_p2 add_ln71_10_fu_1544_p2 add_ln71_11_fu_1595_p2 add_ln71_12_fu_1646_p2 add_ln71_13_fu_1697_p2 add_ln71_14_fu_1748_p2 add_ln71_15_fu_1799_p2 add_ln71_16_fu_1850_p2 add_ln71_17_fu_1901_p2 add_ln71_18_fu_1952_p2 add_ln71_19_fu_2003_p2 add_ln71_20_fu_2054_p2 add_ln71_21_fu_2105_p2 add_ln71_22_fu_2161_p2 add_ln71_23_fu_2212_p2 add_ln71_24_fu_2263_p2 add_ln71_25_fu_2314_p2 add_ln71_26_fu_2365_p2 add_ln71_27_fu_2416_p2 add_ln71_28_fu_2458_p2 add_ln71_29_fu_2500_p2 add_ln71_30_fu_2542_p2 add_ln71_31_fu_2584_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
+        <Module>
+            <Name>shift_and_fill</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+                    <EstimatedClockPeriod>3.208</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>1</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>0</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <LUT>10913</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln708_fu_96_p2" SOURCE="/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_ref.h:708" URAM="0" VARIABLE="sub_ln708"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln708_1_fu_108_p2" SOURCE="/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_ref.h:708" URAM="0" VARIABLE="sub_ln708_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln708_2_fu_138_p2" SOURCE="/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_ref.h:708" URAM="0" VARIABLE="sub_ln708_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln11_fu_174_p2" SOURCE="Documents/reco_v2/reco/patterns_matcher.cpp:11" URAM="0" VARIABLE="add_ln11"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln11_1_fu_180_p2" SOURCE="Documents/reco_v2/reco/patterns_matcher.cpp:11" URAM="0" VARIABLE="add_ln11_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln708_3_fu_210_p2" SOURCE="/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_ref.h:708" URAM="0" VARIABLE="sub_ln708_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln708_4_fu_222_p2" SOURCE="/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_ref.h:708" URAM="0" VARIABLE="sub_ln708_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln708_5_fu_252_p2" SOURCE="/opt/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_ref.h:708" URAM="0" VARIABLE="sub_ln708_5"/>
+            </BindNodes>
+        </Module>
         <Module>
             <Name>match</Name>
             <PerformanceEstimates>
@@ -999,1136 +1022,135 @@
                     <EstimatedClockPeriod>7.298</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>200</Best-caseLatency>
-                    <Average-caseLatency>200</Average-caseLatency>
-                    <Worst-caseLatency>200</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>2.000 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>2.000 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>2.000 us</Worst-caseRealTimeLatency>
+                    <Best-caseLatency>9</Best-caseLatency>
+                    <Average-caseLatency>9</Average-caseLatency>
+                    <Worst-caseLatency>9</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>90.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>90.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>90.000 ns</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>1</PipelineInitiationInterval>
-                    <PipelineDepth>201</PipelineDepth>
+                    <PipelineDepth>10</PipelineDepth>
                     <PipelineType>yes</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>630707</FF>
-                    <AVAIL_FF>2592000</AVAIL_FF>
-                    <UTIL_FF>24</UTIL_FF>
-                    <LUT>656968</LUT>
-                    <AVAIL_LUT>1296000</AVAIL_LUT>
-                    <UTIL_LUT>50</UTIL_LUT>
+                    <FF>158469</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>6</UTIL_FF>
+                    <LUT>374217</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>28</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
-            <InterfaceSummary>
-                <RtlPorts>
-                    <name>ap_clk</name>
-                    <Object>match</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>ap_rst</name>
-                    <Object>match</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>ap_start</name>
-                    <Object>match</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>ap_done</name>
-                    <Object>match</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>ap_idle</name>
-                    <Object>match</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>ap_ready</name>
-                    <Object>match</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>ap_ce</name>
-                    <Object>match</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>matched</name>
-                    <Object>matched</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>ap_vld</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>data</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>matched_ap_vld</name>
-                    <Object>matched</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>ap_vld</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>pattern_id</name>
-                    <Object>pattern_id</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>ap_vld</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>32</Bits>
-                    <Attribute>data</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>pattern_id_ap_vld</name>
-                    <Object>pattern_id</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>ap_vld</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>buffer_read</name>
-                    <Object>buffer_read</Object>
-                    <Type>scalar</Type>
-                    <Scope/>
-                    <IOProtocol>ap_none</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>2920</Bits>
-                    <Attribute>data</Attribute>
-                </RtlPorts>
-            </InterfaceSummary>
         </Module>
         <Module>
             <Name>krnl_s2mm</Name>
+            <Loops>
+                <outer_loop/>
+            </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.550</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>1</Best-caseLatency>
-                    <Average-caseLatency>undef</Average-caseLatency>
-                    <Worst-caseLatency>undef</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>2 ~ 0</PipelineInitiationInterval>
-                    <PipelineType>none</PipelineType>
+                    <Best-caseLatency>51</Best-caseLatency>
+                    <Average-caseLatency>70419</Average-caseLatency>
+                    <Worst-caseLatency>32000019</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.510 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.704 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.320 sec</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>52 ~ 32000020</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <data_retrival>
-                        <Name>data_retrival</Name>
-                        <TripCount>undef</TripCount>
-                        <Latency>1 ~ ?</Latency>
-                        <AbsoluteTimeLatency>10.000 ns ~ ?</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>2</PipelineDepth>
-                    </data_retrival>
-                    <main_matching_loop>
-                        <Name>main_matching_loop</Name>
-                        <TripCount>32</TripCount>
-                        <Latency>241</Latency>
-                        <AbsoluteTimeLatency>2.410 us</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>210</PipelineDepth>
-                    </main_matching_loop>
+                    <outer_loop>
+                        <Name>outer_loop</Name>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>1000000</max>
+                            </range>
+                        </TripCount>
+                        <Latency>49 ~ 32000017</Latency>
+                        <AbsoluteTimeLatency>0.490 us ~ 0.320 sec</AbsoluteTimeLatency>
+                        <PipelineII>32</PipelineII>
+                        <PipelineDepth>50</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                    </outer_loop>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>30</BRAM_18K>
+                    <BRAM_18K>2</BRAM_18K>
                     <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>637237</FF>
-                    <AVAIL_FF>2592000</AVAIL_FF>
-                    <UTIL_FF>24</UTIL_FF>
-                    <LUT>671960</LUT>
-                    <AVAIL_LUT>1296000</AVAIL_LUT>
-                    <UTIL_LUT>51</UTIL_LUT>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>9216</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>226168</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>8</UTIL_FF>
+                    <LUT>390311</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>29</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
                 </Resources>
             </AreaEstimates>
-            <InterfaceSummary>
-                <RtlPorts>
-                    <name>s_axi_control_AWVALID</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_AWREADY</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_AWADDR</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>7</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_WVALID</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_WREADY</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_WDATA</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>32</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_WSTRB</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>4</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_ARVALID</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_ARREADY</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_ARADDR</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>7</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_RVALID</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_RREADY</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_RDATA</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>32</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_RRESP</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>2</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_BVALID</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_BREADY</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>s_axi_control_BRESP</name>
-                    <Object>control</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>s_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>2</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                    <HasCtrl>1</HasCtrl>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>ap_clk</name>
-                    <Object>krnl_s2mm</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>ap_rst_n</name>
-                    <Object>krnl_s2mm</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>interrupt</name>
-                    <Object>krnl_s2mm</Object>
-                    <Type>return value</Type>
-                    <Scope/>
-                    <IOProtocol>ap_ctrl_hs</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWVALID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWREADY</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWADDR</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>64</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWLEN</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>8</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWSIZE</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>3</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWBURST</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>2</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWLOCK</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>2</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWCACHE</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>4</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWPROT</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>3</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWQOS</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>4</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWREGION</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>4</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_AWUSER</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_WVALID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_WREADY</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_WDATA</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>512</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_WSTRB</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>64</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_WLAST</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_WID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_WUSER</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARVALID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARREADY</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARADDR</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>64</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARLEN</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>8</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARSIZE</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>3</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARBURST</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>2</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARLOCK</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>2</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARCACHE</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>4</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARPROT</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>3</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARQOS</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>4</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARREGION</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>4</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_ARUSER</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_RVALID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_RREADY</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_RDATA</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>512</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_RLAST</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_RID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_RUSER</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_RRESP</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>2</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_BVALID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_BREADY</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_BRESP</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>2</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_BID</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>m_axi_gmem_BUSER</name>
-                    <Object>gmem</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>m_axi</IOProtocol>
-                    <IOConfig/>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>unknown</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n2k_TDATA</name>
-                    <Object>n2k_V_data_V</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>axis</IOProtocol>
-                    <IOConfig>register, both mode</IOConfig>
-                    <Dir>in</Dir>
-                    <Bits>512</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n2k_TVALID</name>
-                    <Object>n2k_V_dest_V</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>axis</IOProtocol>
-                    <IOConfig>register, both mode</IOConfig>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n2k_TREADY</name>
-                    <Object>n2k_V_dest_V</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>axis</IOProtocol>
-                    <IOConfig>register, both mode</IOConfig>
-                    <Dir>out</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>control</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n2k_TDEST</name>
-                    <Object>n2k_V_dest_V</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>axis</IOProtocol>
-                    <IOConfig>register, both mode</IOConfig>
-                    <Dir>in</Dir>
-                    <Bits>16</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n2k_TKEEP</name>
-                    <Object>n2k_V_keep_V</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>axis</IOProtocol>
-                    <IOConfig>register, both mode</IOConfig>
-                    <Dir>in</Dir>
-                    <Bits>64</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n2k_TSTRB</name>
-                    <Object>n2k_V_strb_V</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>axis</IOProtocol>
-                    <IOConfig>register, both mode</IOConfig>
-                    <Dir>in</Dir>
-                    <Bits>64</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n2k_TUSER</name>
-                    <Object>n2k_V_user_V</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>axis</IOProtocol>
-                    <IOConfig>register, both mode</IOConfig>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n2k_TLAST</name>
-                    <Object>n2k_V_last_V</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>axis</IOProtocol>
-                    <IOConfig>register, both mode</IOConfig>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-                <RtlPorts>
-                    <name>n2k_TID</name>
-                    <Object>n2k_V_id_V</Object>
-                    <Type>pointer</Type>
-                    <Scope/>
-                    <IOProtocol>axis</IOProtocol>
-                    <IOConfig>register, both mode</IOConfig>
-                    <Dir>in</Dir>
-                    <Bits>1</Bits>
-                    <Attribute>data</Attribute>
-                    <CType>int</CType>
-                </RtlPorts>
-            </InterfaceSummary>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_fu_1004_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:62" URAM="0" VARIABLE="add_ln62"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_fu_1035_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_1_fu_1085_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_2_fu_1136_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_3_fu_1187_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_4_fu_1238_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_5_fu_1289_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_6_fu_1340_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_7_fu_1391_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_8_fu_1442_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_9_fu_1493_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_10_fu_1544_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_11_fu_1595_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_12_fu_1646_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_13_fu_1697_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_14_fu_1748_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_15_fu_1799_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_16_fu_1850_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_17_fu_1901_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_18_fu_1952_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_19_fu_2003_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_20_fu_2054_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_21_fu_2105_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_22_fu_2161_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_23_fu_2212_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_24_fu_2263_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_25_fu_2314_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_26_fu_2365_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_27_fu_2416_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_28_fu_2458_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_29_fu_2500_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_30_fu_2542_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="outer_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_31_fu_2584_p2" SOURCE="Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:71" URAM="0" VARIABLE="add_ln71_31"/>
+            </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
+    <UserConfigCommands/>
     <Args>
-        <Arg ArgName="out" index="0" direction="inout" srcType="ap_uint&lt;512&gt;*" srcSize="512">
+        <Arg ArgName="out" index="0" direction="out" srcType="ap_uint&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="out_r_1" usage="address" direction="in"/>
@@ -2145,25 +1167,84 @@
                 <hwRef type="register" interface="s_axi_control" name="size" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="matched" index="3" direction="out" srcType="bool&amp;" srcSize="1">
-            <hwRefs>
-                <hwRef type="register" interface="s_axi_control" name="matched" usage="data" direction="out"/>
-                <hwRef type="register" interface="s_axi_control" name="matched_ctrl" usage="control" direction="out"/>
-            </hwRefs>
-        </Arg>
-        <Arg ArgName="pattern_id" index="4" direction="out" srcType="int*" srcSize="32">
-            <hwRefs>
-                <hwRef type="register" interface="s_axi_control" name="pattern_id" usage="data" direction="out"/>
-                <hwRef type="register" interface="s_axi_control" name="pattern_id_ctrl" usage="control" direction="out"/>
-            </hwRefs>
-        </Arg>
-        <Arg ArgName="count" index="5" direction="unused" srcType="int&amp;" srcSize="32">
-            <hwRefs>
-                <hwRef type="register" interface="s_axi_control" name="count" usage="data" direction="in"/>
-            </hwRefs>
-        </Arg>
     </Args>
     <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="6" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                        <field offset="10" width="22" name="RESERVED_4" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="2" width="30" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"/>
+                        <field offset="2" width="30" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x10" name="out_r_1" access="W" description="Data signal of out_r" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="out_r" access="W" description="Bit 31 to 0 of out_r"/>
+                    </fields>
+                </register>
+                <register offset="0x14" name="out_r_2" access="W" description="Data signal of out_r" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="out_r" access="W" description="Bit 63 to 32 of out_r"/>
+                    </fields>
+                </register>
+                <register offset="0x1c" name="size" access="W" description="Data signal of size" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="size" access="W" description="Bit 31 to 0 of size"/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="out"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="28" argName="size"/>
+            </constraints>
+        </Interface>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
             <busParams>
                 <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control:m_axi_gmem:n2k</busParam>
@@ -2198,7 +1279,7 @@
                 <port>interrupt</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="m_axi_gmem" type="axi4full" busTypeName="aximm" mode="master" dataWidth="512" addrWidth="64" portPrefix="m_axi_gmem_" paramPrefix="C_M_AXI_GMEM_" offsetSlaveName="s_axi_control" preferredUsageValue="MEMORY">
+        <Interface InterfaceName="m_axi_gmem" type="axi4full" busTypeName="aximm" mode="master" dataWidth="32" addrWidth="64" portPrefix="m_axi_gmem_" paramPrefix="C_M_AXI_GMEM_" preferredUsageValue="MEMORY">
             <busParams>
                 <busParam busParamName="NUM_READ_OUTSTANDING">16</busParam>
                 <busParam busParamName="NUM_WRITE_OUTSTANDING">16</busParam>
@@ -2259,7 +1340,7 @@
             </ports>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="out"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="512" final_bitwidth="512" argName="out"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="out"/>
             </constraints>
         </Interface>
         <Interface InterfaceName="n2k" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="512" portPrefix="n2k_">
@@ -2278,129 +1359,29 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="n2k"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="7" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_" offsetMasterName="m_axi_gmem">
-            <ports>
-                <port>s_axi_control_ARADDR</port>
-                <port>s_axi_control_ARREADY</port>
-                <port>s_axi_control_ARVALID</port>
-                <port>s_axi_control_AWADDR</port>
-                <port>s_axi_control_AWREADY</port>
-                <port>s_axi_control_AWVALID</port>
-                <port>s_axi_control_BREADY</port>
-                <port>s_axi_control_BRESP</port>
-                <port>s_axi_control_BVALID</port>
-                <port>s_axi_control_RDATA</port>
-                <port>s_axi_control_RREADY</port>
-                <port>s_axi_control_RRESP</port>
-                <port>s_axi_control_RVALID</port>
-                <port>s_axi_control_WDATA</port>
-                <port>s_axi_control_WREADY</port>
-                <port>s_axi_control_WSTRB</port>
-                <port>s_axi_control_WVALID</port>
-            </ports>
-            <registers>
-                <register offset="0x00" name="CTRL" access="RW" resetValue="0x0" description="Control signals" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="AP_START" access="RW" resetValue="0" description="Control signal Register for 'ap_start'."/>
-                        <field offset="1" width="1" name="AP_DONE" access="R" resetValue="0" description="Control signal Register for 'ap_done'."/>
-                        <field offset="2" width="1" name="AP_IDLE" access="R" resetValue="0" description="Control signal Register for 'ap_idle'."/>
-                        <field offset="3" width="1" name="AP_READY" access="R" resetValue="0" description="Control signal Register for 'ap_ready'."/>
-                        <field offset="4" width="3" name="RESERVED_1" access="R" resetValue="0" description="Reserved.  0s on read."/>
-                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" resetValue="0" description="Control signal Register for 'auto_restart'."/>
-                        <field offset="8" width="24" name="RESERVED_2" access="R" resetValue="0" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x04" name="GIER" access="RW" resetValue="0x0" description="Global Interrupt Enable Register" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="Enable" access="RW" resetValue="0" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x08" name="IP_IER" access="RW" resetValue="0x0" description="IP Interrupt Enable Register" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" resetValue="0" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
-                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" resetValue="0" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
-                        <field offset="2" width="30" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x0c" name="IP_ISR" access="RW" resetValue="0x0" description="IP Interrupt Status Register" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" resetValue="0" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"/>
-                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" resetValue="0" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"/>
-                        <field offset="2" width="30" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x10" name="out_r_1" access="W" resetValue="0x0" description="Data signal of out_r" range="32">
-                    <fields>
-                        <field offset="0" width="32" name="out_r" access="W" resetValue="0" description="Bit 31 to 0 of out_r"/>
-                    </fields>
-                </register>
-                <register offset="0x14" name="out_r_2" access="W" resetValue="0x0" description="Data signal of out_r" range="32">
-                    <fields>
-                        <field offset="0" width="32" name="out_r" access="W" resetValue="0" description="Bit 63 to 32 of out_r"/>
-                    </fields>
-                </register>
-                <register offset="0x1c" name="size" access="W" resetValue="0x0" description="Data signal of size" range="32">
-                    <fields>
-                        <field offset="0" width="32" name="size" access="W" resetValue="0" description="Bit 31 to 0 of size"/>
-                    </fields>
-                </register>
-                <register offset="0x24" name="matched" access="R" resetValue="0x0" description="Data signal of matched" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="matched" access="R" resetValue="0" description="Bit 0 to 0 of matched"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x28" name="matched_ctrl" access="R" resetValue="0x0" description="Control signal of matched" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="matched_ap_vld" access="R" resetValue="0" description="Control signal matched_ap_vld"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x34" name="pattern_id" access="R" resetValue="0x0" description="Data signal of pattern_id" range="32">
-                    <fields>
-                        <field offset="0" width="32" name="pattern_id" access="R" resetValue="0" description="Bit 31 to 0 of pattern_id"/>
-                    </fields>
-                </register>
-                <register offset="0x38" name="pattern_id_ctrl" access="R" resetValue="0x0" description="Control signal of pattern_id" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="pattern_id_ap_vld" access="R" resetValue="0" description="Control signal pattern_id_ap_vld"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" resetValue="0" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x44" name="count" access="W" resetValue="0x0" description="Data signal of count" range="32">
-                    <fields>
-                        <field offset="0" width="32" name="count" access="W" resetValue="0" description="Bit 31 to 0 of count"/>
-                    </fields>
-                </register>
-            </registers>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="out"/>
-            </constraints>
-        </Interface>
     </Interfaces>
     <ReportHWInterface>
         <section name="HW Interfaces" level="0">
             <item name="M_AXI">
-                <table>
-                    <keys size="12">Interface, Data Width (SW-&gt;HW), Address Width, Latency, Offset, Offset Interfaces, Register, Max Widen Bitwidth, Max Read Burst Length, Max Write Burst Length, Num Read Outstanding, Num Write Outstanding</keys>
-                    <column name="m_axi_gmem">512 -&gt; 512, 64, 0, slave, s_axi_control, 0, 0, 16, 16, 16, 16</column>
+                <table isCollapsed="0">
+                    <keys size="11">Interface, Data Width (SW-&gt;HW), Address Width, Latency, Offset, Register, Max Widen Bitwidth, Max Read Burst Length, Max Write Burst Length, Num Read Outstanding, Num Write Outstanding</keys>
+                    <column name="m_axi_gmem">16 -&gt; 16, 64, 0, slave, 0, 0, 16, 16, 16, 16</column>
                 </table>
             </item>
             <item name="S_AXILITE">
-                <table>
-                    <keys size="6">Interface, Data Width, Address Width, Offset, Register, Data Interface</keys>
-                    <column name="s_axi_control">32, 7, 16, 0, m_axi_gmem</column>
+                <table isCollapsed="0">
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_control">32, 6, 16, 0</column>
                 </table>
             </item>
             <item name="AXIS">
-                <table>
+                <table isCollapsed="0">
                     <keys size="11">Interface, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
                     <column name="n2k">both, 512, 16, 1, 64, 1, 1, 64, 1, 1</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
-                <table>
+                <table isCollapsed="0">
                     <keys size="3">Interface, Type, Ports</keys>
                     <column name="ap_clk">clock, ap_clk</column>
                     <column name="ap_rst_n">reset, ap_rst_n</column>
@@ -2415,12 +1396,9 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="out">inout, ap_uint&lt;512&gt;*</column>
+                    <column name="out">out, ap_uint&lt;16&gt;*</column>
                     <column name="n2k">in, stream&lt;hls::axis&lt;ap_uint&lt;512&gt; 1 1 16&gt; 0&gt;&amp;</column>
                     <column name="size">in, unsigned int</column>
-                    <column name="matched">out, bool&amp;</column>
-                    <column name="pattern_id">out, int*</column>
-                    <column name="count">unused, int&amp;</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
@@ -2431,30 +1409,18 @@
                     <column name="out">s_axi_control out_r_2, register, offset, offset=0x14 range=32</column>
                     <column name="n2k">n2k, interface, , </column>
                     <column name="size">s_axi_control size, register, , offset=0x1c range=32</column>
-                    <column name="matched">s_axi_control matched, register, , offset=0x24 range=32</column>
-                    <column name="matched">s_axi_control matched_ctrl, register, , offset=0x28 range=32</column>
-                    <column name="pattern_id">s_axi_control pattern_id, register, , offset=0x34 range=32</column>
-                    <column name="pattern_id">s_axi_control pattern_id_ctrl, register, , offset=0x38 range=32</column>
-                    <column name="count">s_axi_control count, register, , offset=0x44 range=32</column>
                 </table>
             </item>
         </section>
     </ReportSWInterface>
     <ReportBurst>
         <section name="M_AXI Burst Information" level="0">
-            <item name="Burst Summary">
+            <item name="Bursts and Widening Missed">
                 <table>
-                    <keys size="3">HW Interface, Message, Location</keys>
-                    <column name="m_axi_gmem">Multiple burst writes of variable length and bit width 512 in loop 'data_retrival', ../Downloads/reco/tmp/krnl_s2mm.cpp:71:17</column>
-                </table>
-            </item>
-            <item name="Burst Missed">
-                <table>
-                    <keys size="5">HW Interface, Variable, Problem, Resolution, Location</keys>
-                    <column name="m_axi_gmem">out, Stride is incompatible, 214-230, ../Downloads/reco/tmp/krnl_s2mm.cpp:79:19</column>
+                    <keys size="6">HW Interface, Variable, Loop, Problem, Resolution, Location</keys>
+                    <column name="m_axi_gmem">out, main_matching_loop, Stride is incompatible, 214-230, Documents/reco_v2/reco/tmp/krnl_s2mm.cpp:65:22</column>
                 </table>
             </item>
         </section>
     </ReportBurst>
 </profile>
-
