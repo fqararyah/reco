@@ -58,6 +58,7 @@ print(num_of_patterns)
 #print(pattern_list.index('thisissometempspaceforthesockinaddrinyeahyeahiknowthisislamebutanywaywhocareshorizongotitworkingsoalliscool'))
 #print(pattern_list.index('friday'))
 
+#specials are the characters that need special treatement when typed cpp (hence HLS) we encountered ' and " in the provided patterns
 specials = {}
 specials["'"] = "\\'"
 specials['"'] = '\\"'
